@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (none in this case)
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://sree-krishna-botanicals.vercel.app/sitemap.xml
+
+# Crawl delay (optional, be polite to crawlers)
+Crawl-delay: 5

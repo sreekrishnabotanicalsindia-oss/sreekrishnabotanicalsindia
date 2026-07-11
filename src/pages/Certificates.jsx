@@ -17,7 +17,19 @@ export default function Certificates() {
   return (
     <>
       <Helmet>
-        <title>Certificates | Sree Krishna Botanicals</title>
+        <title>Certifications | ISO, FSSAI, HACCP Certified Botanical Extract Manufacturer - Sree Krishna Botanicals</title>
+        <meta name="description" content="Sree Krishna Botanicals holds ISO, FSSAI, HACCP, and GMP certifications ensuring the highest standards in botanical extract and oleoresin manufacturing. View our accreditations." />
+        <meta name="keywords" content="oleoresin certifications India, ISO certified botanical extracts, FSSAI certified spice extract, HACCP certified manufacturer, GMP certified oleoresin, certified botanical extract India, food safety certification spice, quality certified natural extract, accredited botanical manufacturer" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/certificates" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/certificates" />
+        <meta property="og:title" content="Certifications | Sree Krishna Botanicals" />
+        <meta property="og:description" content="ISO, FSSAI, HACCP and GMP certified botanical extract manufacturer from India. View our quality accreditations." />
+        <meta property="og:site_name" content="Sree Krishna Botanicals" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Certifications | Sree Krishna Botanicals" />
+        <meta name="twitter:description" content="ISO, FSSAI, HACCP certified oleoresin and botanical extract manufacturer from India." />
       </Helmet>
 
       <section className="pt-40 pb-32 bg-[#0a0a0a] text-center relative overflow-hidden">

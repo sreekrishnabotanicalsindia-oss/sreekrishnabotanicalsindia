@@ -28,7 +28,19 @@ export default function ExtractionProcess() {
   return (
     <>
       <Helmet>
-        <title>Extraction Process | Sree Krishna Botanicals</title>
+        <title>Oleoresin Extraction Process | How We Extract Spice Oils - Sree Krishna Botanicals</title>
+        <meta name="description" content="Discover the end-to-end oleoresin extraction process at Sree Krishna Botanicals – from raw material selection and cleaning to solvent extraction, filtration, concentration, quality testing, and packaging." />
+        <meta name="keywords" content="oleoresin extraction process, solvent extraction spices, botanical extract process, how oleoresin is made, spice extraction technology, turmeric extraction, chilli oil extraction, supercritical extraction India, spice processing India, botanical extract manufacturing, CO2 extraction, natural extract production" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/extraction-process" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/extraction-process" />
+        <meta property="og:title" content="Oleoresin Extraction Process | Sree Krishna Botanicals" />
+        <meta property="og:description" content="End-to-end oleoresin extraction – from raw material selection to quality testing and packaging. Purity, Potency, Perfection." />
+        <meta property="og:site_name" content="Sree Krishna Botanicals" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Oleoresin Extraction Process | Sree Krishna Botanicals" />
+        <meta name="twitter:description" content="Discover how we extract premium botanical oils and oleoresins with precision and care." />
       </Helmet>
 
       {/* Hero Section */}

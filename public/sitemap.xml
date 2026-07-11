@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/about</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Products -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product Details - Turmeric Oleoresin -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products/turmeric-oleoresin</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Details - Chilli Oleoresin -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products/chilli-oleoresin</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Details - Black Pepper Oleoresin -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products/black-pepper-oleoresin</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Details - Ginger Oleoresin -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products/ginger-oleoresin</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Details - Cardamom Oleoresin -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products/cardamom-oleoresin</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Details - Coriander Oleoresin -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/products/coriander-oleoresin</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Extraction Process -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/extraction-process</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Quality -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/quality</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Global Exports -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/exports</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Certificates -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/certificates</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://sree-krishna-botanicals.vercel.app/contact</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

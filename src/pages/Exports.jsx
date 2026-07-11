@@ -19,7 +19,19 @@ export default function Exports() {
   return (
     <div className="bg-[#fcfdfa] min-h-screen font-sans text-gray-800">
       <Helmet>
-        <title>Global Exports | Sree Krishna Botanicals</title>
+        <title>Global Spice Extract Exports | Oleoresin Exporter to USA, Europe, Middle East - Sree Krishna Botanicals</title>
+        <meta name="description" content="Sree Krishna Botanicals exports premium oleoresins and spice extracts to USA, Europe, Middle East, and Asia. Reliable global supplier of turmeric, chilli, black pepper, ginger oleoresins with international certifications." />
+        <meta name="keywords" content="oleoresin exporter India, spice extract export, botanical extracts global supplier, turmeric oleoresin export USA, chilli extract Europe, black pepper oleoresin Middle East, Indian spice extracts international, botanical extracts import India, export quality oleoresin, global spice oil supplier, India botanical extract trade" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/exports" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/exports" />
+        <meta property="og:title" content="Global Oleoresin Exports | Sree Krishna Botanicals" />
+        <meta property="og:description" content="Premium oleoresin and spice extract exporter to USA, Europe, Middle East and Asia. Certified, reliable global botanical extract supplier from India." />
+        <meta property="og:site_name" content="Sree Krishna Botanicals" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Global Oleoresin Exports | Sree Krishna Botanicals" />
+        <meta name="twitter:description" content="Exporting premium oleoresins and spice extracts globally – USA, Europe, Middle East, and Asia." />
       </Helmet>
 
       {/* Hero Section */}
