@@ -244,7 +244,7 @@ export default function Home() {
       </div>
 
       {/* About Us Module */}
-      <section className="pt-4 pb-12 md:pt-12 md:pb-20 bg-white">
+      <section className="pt-4 pb-4 md:pt-12 md:pb-8 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16">
 
@@ -328,7 +328,7 @@ export default function Home() {
       </section>
 
       {/* Our Products Section */}
-      <section className="pt-6 pb-16 md:py-20 bg-[#fcfdfa]">
+      <section className="pt-4 pb-16 md:py-12 bg-[#fcfdfa]">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
 
           {/* Header */}
