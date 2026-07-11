@@ -63,7 +63,7 @@ export default function ProductDetails() {
       </Helmet>
 
       {/* Main Container */}
-      <div className="min-h-screen bg-[#fcfcfa] pt-28 pb-20">
+      <div className="min-h-screen bg-[#fcfcfa] pt-0 pb-20">
         
         {/* Top Badge Bar */}
         <div className="bg-[#f5f8f5] border-y border-green-100">

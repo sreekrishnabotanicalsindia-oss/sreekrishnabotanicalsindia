@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ChevronDown, ChevronUp, Droplet, Leaf, Package, ArrowRight, ArrowRightCircle } from 'lucide-react';
 import { products } from '../data/products';
+import productsHeroImg from '../assets/Products -hero.png';
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState({
     Oleoresins: true,
     'Powder Items': true,
@@ -40,38 +42,13 @@ export default function Products() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop')` }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f8f9eb]/95 via-[#f8f9eb]/70 to-transparent"></div>
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10 h-full flex flex-col justify-center">
-          <div className="max-w-2xl">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-heading font-bold text-[#0d4f26] mb-4"
-            >
-              Our Products
-            </motion.h1>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="flex justify-start mb-6"
-            >
-              <Droplet className="text-[#c1a755] fill-[#c1a755]" size={24} />
-            </motion.div>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed max-w-lg"
-            >
-              Premium quality oleoresins, powders and spices extracted from nature, crafted with advanced technology and uncompromised purity.
-            </motion.p>
-          </div>
+      <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#f3f7f0] to-[#e4eedb] lg:bg-none">
+        <div className="relative w-full h-auto lg:h-screen">
+          <img
+            src={productsHeroImg}
+            alt="Products Hero"
+            className="w-full h-full lg:object-cover lg:object-center object-contain block"
+          />
         </div>
       </section>
 
@@ -83,14 +60,25 @@ export default function Products() {
           <aside className="w-full lg:w-[280px] flex-shrink-0">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden sticky top-28">
               {/* Sidebar Header */}
-              <div className="bg-[#0a4a22] p-5 flex items-center gap-3 text-white">
+              <button 
+                onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
+                className="bg-[#0a4a22] w-full p-5 flex items-center gap-3 text-white cursor-pointer lg:cursor-default"
+              >
                 <Leaf size={20} />
-                <h3 className="font-bold text-lg">Product Categories</h3>
-                <ChevronUp className="ml-auto" size={20} />
-              </div>
+                <h3 className="font-bold text-lg text-white m-0">Product Categories</h3>
+                {isMobileSidebarOpen ? <ChevronUp className="ml-auto lg:hidden" size={20} /> : <ChevronDown className="ml-auto lg:hidden" size={20} />}
+                <ChevronUp className="ml-auto hidden lg:block" size={20} />
+              </button>
 
               {/* Accordion Sections */}
-              <div className="p-4 space-y-4">
+              <AnimatePresence>
+                {(isMobileSidebarOpen || typeof window !== 'undefined' && window.innerWidth >= 1024) && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="p-4 space-y-4 lg:!h-auto lg:!opacity-100 lg:!block overflow-hidden"
+                  >
                 
                 {/* Oleoresins Accordion */}
                 <div className="border border-green-50 rounded-xl overflow-hidden bg-green-50/30">
@@ -196,8 +184,9 @@ export default function Products() {
                     )}
                   </AnimatePresence>
                 </div>
-
-              </div>
+              </motion.div>
+              )}
+              </AnimatePresence>
             </div>
           </aside>
 

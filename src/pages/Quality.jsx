@@ -75,24 +75,17 @@ export default function Quality() {
             {/* Dotted Line (Desktop) */}
             <div className="hidden lg:block absolute top-12 left-0 right-0 h-0 border-t-2 border-dashed border-[#c1a755] z-0 opacity-50"></div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 relative z-10">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8 md:gap-8 relative z-10">
               {qaSteps.map((step, idx) => (
                 <div key={step.id} className="flex flex-col items-center text-center relative group">
-                  <div className="w-24 h-24 rounded-full bg-white border-2 border-[#e5eadf] shadow-sm flex items-center justify-center mb-6 group-hover:border-[#0d4f26] transition-colors duration-300 relative z-10">
-                    <step.icon className="text-[#0d4f26] w-8 h-8" />
+                  <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white border-2 border-[#e5eadf] shadow-sm flex items-center justify-center mb-3 md:mb-6 group-hover:border-[#0d4f26] transition-colors duration-300 relative z-10">
+                    <step.icon className="text-[#0d4f26] w-6 h-6 md:w-8 md:h-8" />
                   </div>
-                  
-                  {/* Arrow for mobile/tablet */}
-                  {idx < qaSteps.length - 1 && (
-                    <div className="lg:hidden text-[#c1a755] my-4 opacity-50">
-                      ↓
-                    </div>
-                  )}
 
-                  <h3 className="font-bold text-[#0d4f26] text-sm md:text-base mb-3 max-w-[150px]">
+                  <h3 className="font-bold text-[#0d4f26] text-xs md:text-sm lg:text-base mb-2 md:mb-3 max-w-[150px]">
                     {step.id}. {step.title}
                   </h3>
-                  <p className="text-gray-500 text-xs md:text-sm leading-relaxed max-w-[160px]">
+                  <p className="text-gray-500 text-[10px] md:text-xs lg:text-sm leading-relaxed max-w-[160px]">
                     {step.desc}
                   </p>
                 </div>

@@ -211,7 +211,7 @@ export default function Contact() {
 
             {/* Column 3: Business Hours */}
             <div className="w-full lg:w-3/12">
-                <div className="bg-[#f2f4ef] rounded-2xl p-8 flex flex-col h-full relative overflow-hidden border border-[#e5eadf]">
+                <div className="bg-[#f2f4ef] rounded-2xl p-8 pb-24 md:pb-32 flex flex-col h-full relative overflow-hidden border border-[#e5eadf]">
                     
                     <div className="flex items-center gap-3 mb-4 relative z-10">
                         <div className="w-12 h-12 rounded-full border-2 border-[#0d4f26] flex items-center justify-center shrink-0">
@@ -238,7 +238,7 @@ export default function Contact() {
                     </div>
                     
                     {/* Bottom Leaf Decor */}
-                    <div className="absolute bottom-0 left-0 right-0 h-32 opacity-100 mix-blend-multiply pointer-events-none">
+                    <div className="absolute bottom-0 left-0 right-0 h-20 md:h-24 lg:h-32 opacity-100 mix-blend-multiply pointer-events-none">
                         <img 
                             src={leavesDecorImg} 
                             alt="Leaves" 

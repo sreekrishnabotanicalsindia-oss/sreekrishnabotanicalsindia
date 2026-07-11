@@ -1,17 +1,27 @@
 import { Helmet } from 'react-helmet-async';
 import { Leaf, Wind, Activity, Filter, Box, Droplets, Droplet, Settings, ShieldCheck, Package, Globe, Zap } from 'lucide-react';
 import heroImage from '../assets/Extraction process hero image.png';
+import imgRawMaterials from '../assets/step_1_raw_materials.png';
+import imgCleaning from '../assets/step_2_cleaning.png';
+import imgDrying from '../assets/Drying.png';
+import imgGrinding from '../assets/grinding.png';
+import imgExtraction from '../assets/about_extraction_equip.png';
+import imgFiltration from '../assets/oleoresins.png';
+import imgConcentration from '../assets/powder_items.png';
+import imgTesting from '../assets/about_quality_scientist.png';
+import imgPackaging from '../assets/about_warehouse.png';
+import trustBgImg from '../assets/ChatGPT Image Jul 11, 2026, 06_53_00 PM.png';
 
 const steps = [
-  { id: 1, title: 'Raw Material Selection', img: 'https://images.unsplash.com/photo-1596541584288-467262ba99a8?w=300&h=200&fit=crop', icon: Leaf, desc: 'We source premium quality botanicals from trusted farmers and suppliers.' },
-  { id: 2, title: 'Cleaning & Washing', img: 'https://images.unsplash.com/photo-1621509172051-fb1135cb1a5e?w=300&h=200&fit=crop', icon: Droplets, desc: 'Raw materials are cleaned thoroughly to remove impurities and residues.' },
-  { id: 3, title: 'Drying', img: 'https://images.unsplash.com/photo-1598440049437-6404ebfaec24?w=300&h=200&fit=crop', icon: Wind, desc: 'Carefully dried under controlled conditions to retain natural actives.' },
-  { id: 4, title: 'Grinding', img: 'https://images.unsplash.com/photo-1540148426941-83141757827f?w=300&h=200&fit=crop', icon: Settings, desc: 'Botanicals are ground to the right particle size for efficient extraction.' },
-  { id: 5, title: 'Extraction', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop', icon: Droplet, desc: 'Advanced extraction using solvent or water to pull out active compounds.' },
-  { id: 6, title: 'Filtration', img: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&h=200&fit=crop', icon: Filter, desc: 'Filtration removes solids and impurities to ensure a pure extract.' },
-  { id: 7, title: 'Concentration', img: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=300&h=200&fit=crop', icon: Activity, desc: 'Extract is concentrated under controlled temperature to achieve desired potency.' },
-  { id: 8, title: 'Quality Testing', img: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=300&h=200&fit=crop', icon: ShieldCheck, desc: 'Rigorous in-house testing ensures purity, potency, safety and consistency.' },
-  { id: 9, title: 'Packaging & Storage', img: 'https://images.unsplash.com/photo-1629851724391-724f8d506d86?w=300&h=200&fit=crop', icon: Package, desc: 'Packed in high-quality, food-grade packaging and stored in controlled conditions.' },
+  { id: 1, title: 'Raw Material Selection', img: imgRawMaterials, icon: Leaf, desc: 'We source premium quality botanicals from trusted farmers and suppliers.' },
+  { id: 2, title: 'Cleaning & Washing', img: imgCleaning, icon: Droplets, desc: 'Raw materials are cleaned thoroughly to remove impurities and residues.' },
+  { id: 3, title: 'Drying', img: imgDrying, icon: Wind, desc: 'Carefully dried under controlled conditions to retain natural actives.' },
+  { id: 4, title: 'Grinding', img: imgGrinding, icon: Settings, desc: 'Botanicals are ground to the right particle size for efficient extraction.' },
+  { id: 5, title: 'Extraction', img: imgExtraction, icon: Droplet, desc: 'Advanced extraction using solvent or water to pull out active compounds.' },
+  { id: 6, title: 'Filtration', img: imgFiltration, icon: Filter, desc: 'Filtration removes solids and impurities to ensure a pure extract.' },
+  { id: 7, title: 'Concentration', img: imgConcentration, icon: Activity, desc: 'Extract is concentrated under controlled temperature to achieve desired potency.' },
+  { id: 8, title: 'Quality Testing', img: imgTesting, icon: ShieldCheck, desc: 'Rigorous in-house testing ensures purity, potency, safety and consistency.' },
+  { id: 9, title: 'Packaging & Storage', img: imgPackaging, icon: Package, desc: 'Packed in high-quality, food-grade packaging and stored in controlled conditions.' },
 ];
 
 export default function ExtractionProcess() {
@@ -30,32 +40,7 @@ export default function ExtractionProcess() {
           className="w-full h-auto block"
         />
         
-        {/* Absolute overlay for content */}
-        <div className="absolute inset-0 flex flex-col justify-start pt-12 sm:pt-20 md:pt-32 lg:pt-40">
-          {/* Subtle gradient just to ensure text readability, fading out quickly */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent w-full md:w-2/3"></div>
-          
-          <div className="container mx-auto px-4 max-w-[1400px] relative z-10">
-            <div className="max-w-2xl ml-0 md:ml-12">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0d4f26] mb-1 sm:mb-2 md:mb-4">
-                Our Extraction Process
-              </h1>
-              
-              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4 md:mb-6 justify-start">
-                <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent to-[#c1a755]"></div>
-                <Droplet className="text-[#c1a755] fill-[#c1a755] w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-l from-transparent to-[#c1a755]"></div>
-              </div>
 
-              <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-1 sm:mb-2 md:mb-4">
-                Purity. Potency. Perfection.
-              </h2>
-              <p className="text-gray-800 font-medium leading-snug sm:leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg max-w-[250px] sm:max-w-[350px] md:max-w-[450px]">
-                We use advanced extraction technology to preserve the natural goodness, color, aroma and beneficial compounds of every botanical we process.
-              </p>
-            </div>
-          </div>
-        </div>
         
         {/* Wave Divider */}
         <div className="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-20 pointer-events-none text-white">
@@ -162,21 +147,21 @@ export default function ExtractionProcess() {
 
             {/* Right Box: Trust */}
             <div className="lg:w-5/12 rounded-2xl overflow-hidden relative bg-[#0a3a1c]">
-              <div className="absolute inset-y-0 left-0 w-2/3 lg:w-3/4">
-                <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1974&auto=format&fit=crop" alt="Oil Drip" className="w-full h-full object-cover opacity-30 mix-blend-luminosity" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0a3a1c]/80 to-[#0a3a1c]"></div>
+              <div className="absolute inset-y-0 right-0 w-2/3 lg:w-3/4">
+                <img src={trustBgImg} alt="Oil Drip" className="w-full h-full object-cover opacity-30 mix-blend-luminosity" />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a3a1c]/80 to-[#0a3a1c]"></div>
               </div>
-              <div className="relative z-10 h-full p-8 flex flex-col justify-center items-end text-right">
+              <div className="relative z-10 h-full p-8 flex flex-col justify-center items-start text-left">
                 
                 <div className="mb-6">
-                  <div className="flex justify-end mb-3"><Droplet className="text-[#c1a755] fill-[#c1a755]" size={16} /></div>
+                  <div className="flex justify-start mb-3"><Droplet className="text-[#c1a755] fill-[#c1a755]" size={16} /></div>
                   <h3 className="text-2xl text-white font-serif italic font-light leading-snug">
                     We don't just extract <br/>ingredients,<br/>
                     <span className="font-sans font-bold text-[#c1a755] not-italic">We extract trust.</span>
                   </h3>
                 </div>
                 
-                <div className="flex gap-6 justify-end text-[#c1a755]">
+                <div className="flex gap-6 justify-start text-[#c1a755]">
                   <div className="flex flex-col items-center gap-1">
                     <Leaf size={18} strokeWidth={1.5} />
                     <span className="text-[9px] tracking-widest uppercase font-bold text-white">Natural</span>
