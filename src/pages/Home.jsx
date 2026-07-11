@@ -200,11 +200,14 @@ export default function Home() {
                 >
                   EXPLORE PRODUCTS
                 </Link>
-                <button
+                <a
+                  href="/catalogue.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-[#0b3c1d] border border-[#d4af37] px-[clamp(8px,2vw,32px)] py-[clamp(4px,1vw,12px)] rounded text-[clamp(6px,1.5vw,14px)] font-bold tracking-wide flex items-center justify-center gap-1 lg:gap-2 hover:bg-[#fffdf5] transition-colors shadow-sm"
                 >
                   DOWNLOAD CATALOGUE <Download size={14} className="text-[#d4af37] w-[clamp(8px,1.5vw,16px)] h-[clamp(8px,1.5vw,16px)]" />
-                </button>
+                </a>
               </motion.div>
             </div>
 

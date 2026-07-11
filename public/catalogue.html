@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sree Krishna Botanicals – Product Catalogue 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    /* ── COVER PAGE ───────────────────────────────────────────── */
+    .cover {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #0a3a1c 0%, #0d5427 45%, #1a7a3a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 40px;
+      page-break-after: always;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(193,167,85,0.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.07) 0%, transparent 55%);
+    }
+    .cover-inner { position: relative; z-index: 1; text-align: center; }
+    .cover-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 4px 24px rgba(193,167,85,0.5));
+    }
+    .cover-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+    .cover-brand span { color: #c1a755; }
+    .cover-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-top: 12px;
+      margin-bottom: 40px;
+    }
+    .cover-divider {
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #c1a755, transparent);
+      margin: 0 auto 40px;
+    }
+    .cover-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #c1a755;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .cover-year {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 4px;
+    }
+    .cover-badges {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+    .cover-badge {
+      border: 1px solid rgba(193,167,85,0.5);
+      color: #c1a755;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 2px;
+    }
+    .cover-contact {
+      margin-top: 48px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 1px;
+    }
+
+    /* ── INTRO PAGE ───────────────────────────────────────────── */
+    .intro-page {
+      padding: 60px 60px 40px;
+      page-break-after: always;
+      border-top: 6px solid #0d4f26;
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c1a755;
+      margin-bottom: 8px;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #0a3a1c;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .intro-text {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #444;
+      max-width: 680px;
+      margin-bottom: 36px;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+      background: #f5f9f2;
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .stat-box { text-align: center; }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #0d4f26;
+    }
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 4px;
+    }
+    .cert-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .cert-chip {
+      background: #0a3a1c;
+      color: #fff;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 2px;
+    }
+
+    /* ── PRODUCT PAGES ────────────────────────────────────────── */
+    .category-header {
+      background: linear-gradient(90deg, #0a3a1c, #1a6b38);
+      color: #fff;
+      padding: 20px 60px;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      page-break-before: always;
+    }
+    .category-header span { color: #c1a755; }
+    .cat-line { flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+    .product-card {
+      border: 1px solid #e8ede5;
+      padding: 28px 32px;
+      page-break-inside: avoid;
+    }
+    .product-card:nth-child(odd) { border-right: none; }
+    .product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #0a3a1c;
+      margin-bottom: 4px;
+    }
+    .product-category-tag {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c1a755;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .product-overview {
+      font-size: 11.5px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 14px;
+      border-left: 3px solid #e0ead6;
+      padding-left: 10px;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .spec-table tr { border-bottom: 1px solid #f0f0f0; }
+    .spec-table td {
+      padding: 5px 0;
+      font-size: 10.5px;
+      vertical-align: top;
+    }
+    .spec-table td:first-child {
+      color: #888;
+      width: 38%;
+      font-weight: 500;
+      padding-right: 8px;
+      white-space: nowrap;
+    }
+    .spec-table td:last-child { color: #222; font-weight: 500; }
+
+    /* ── BACK COVER ───────────────────────────────────────────── */
+    .back-cover {
+      background: #0a3a1c;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      page-break-before: always;
+      text-align: center;
+    }
+    .back-cover h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .back-cover h2 span { color: #c1a755; }
+    .back-cover p { font-size: 13px; color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.8; margin-bottom: 40px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0;
+      max-width: 700px;
+    }
+    .contact-item {
+      border: 1px solid rgba(193,167,85,0.3);
+      border-radius: 6px;
+      padding: 20px;
+    }
+    .contact-item-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c1a755;
+      margin-bottom: 8px;
+    }
+    .contact-item-value {
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    .back-cover-url {
+      font-size: 13px;
+      color: #c1a755;
+      letter-spacing: 2px;
+      margin-top: 32px;
+      text-decoration: none;
+    }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .cover { min-height: 100vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ COVER ═══════════════ -->
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="cover-brand">Sree Krishna<br/><span>Botanicals</span></div>
+      <div class="cover-tagline">Premium Botanical Extracts &amp; Spice Oleoresins</div>
+      <div class="cover-divider"></div>
+      <div class="cover-title">Product Catalogue</div>
+      <div class="cover-year">2026 Edition &nbsp;·&nbsp; Confidential &amp; Proprietary</div>
+      <div class="cover-badges">
+        <div class="cover-badge">ISO Certified</div>
+        <div class="cover-badge">FSSAI Compliant</div>
+        <div class="cover-badge">HACCP</div>
+        <div class="cover-badge">GMP</div>
+        <div class="cover-badge">Export Quality</div>
+      </div>
+      <div class="cover-contact">sree-krishna-botanicals.vercel.app &nbsp;·&nbsp; Andhra Pradesh, India</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <div class="intro-page">
+    <div class="section-label">Who We Are</div>
+    <div class="section-heading">Nature's Finest,<br/>Crafted with Precision</div>
+    <p class="intro-text">
+      Sree Krishna Botanicals is a premier manufacturer and global exporter of high-quality oleoresins, 
+      botanical spice extracts, standardised powders, and whole spices. Rooted in the fertile spice-growing 
+      heartlands of Andhra Pradesh, India, we combine traditional botanical knowledge with modern 
+      extraction technology to deliver products of unmatched purity, potency, and consistency.
+    </p>
+    <p class="intro-text">
+      Our state-of-the-art facility processes over 30 varieties of spices and herbs using food-grade 
+      solvent extraction, supercritical CO₂ extraction, and cold-press methods. Every batch is 
+      rigorously tested using HPLC and other analytical techniques before dispatch, ensuring that 
+      every product meets or exceeds global food safety and pharmaceutical standards.
+    </p>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Product Varieties</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Countries Exported</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Natural Sourcing</div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-chip">ISO 22000:2018</div>
+      <div class="cert-chip">FSSAI Licensed</div>
+      <div class="cert-chip">HACCP Certified</div>
+      <div class="cert-chip">GMP Compliant</div>
+      <div class="cert-chip">Halal Certified</div>
+      <div class="cert-chip">Kosher Available</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ OLEORESINS ═══════════════ -->
+  <div class="category-header">
+    <span>01</span>
+    <span class="cat-line"></span>
+    Oleoresins &amp; Botanical Extracts
+    <span class="cat-line"></span>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-name">Turmeric Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Premium turmeric oleoresin rich in curcuminoids. Widely used as a natural colorant and functional ingredient in food, pharma, and cosmetic applications.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Curcumin: 10% – 95%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Food coloring, Pharma, Cosmetics</td></tr>
+        <tr><td>Packaging</td><td>25 kg HDPE Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Capsicum / Chilli Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Highly concentrated capsicum oleoresin with standardised pungency. Perfect for heat-level control in food products, sauces, and nutraceuticals.</p>
+      <table class="spec-table">
+        <tr><td>Pungency</td><td>1M – 6M SHU</td></tr>
+        <tr><td>Active Compound</td><td>Capsaicin</td></tr>
+        <tr><td>Applications</td><td>Sauces, Seasonings, Pharma</td></tr>
+        <tr><td>Packaging</td><td>20 kg / 25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Black Pepper Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Rich, pungent black pepper extract standardised for piperine content. Enhances bioavailability when combined with other nutraceuticals.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Piperine: 20–40%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Seasonings, Meat packing, Pharma</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Ginger Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Warm and spicy ginger extract standardised for gingerol and shogaol content. Prized for its digestive and anti-nausea properties.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Gingerol: 20–30%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Beverages, Confectionery, Pharma</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Cardamom Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Sweet and intensely aromatic cardamom extract. Widely used in confectionery, beverages, and personal care products for its distinctive fragrance.</p>
+      <table class="spec-table">
+        <tr><td>Volatile Oil</td><td>~30%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Baked goods, Beverages, Fragrances</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Paprika Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Vibrant red paprika extract used primarily as a natural food colorant. Delivers consistent colour values for meat, dairy, and snack applications.</p>
+      <table class="spec-table">
+        <tr><td>Color Value</td><td>20,000 – 100,000 CU</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Food coloring, Meat products, Snacks</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Clove Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Potent and aromatic clove extract with high eugenol content. Used extensively in dental formulations, food flavouring, and antimicrobial applications.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Eugenol: 70–85%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Dental products, Food flavouring</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Rosemary Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Piney and astringent rosemary extract rich in carnosic acid. Widely used as a natural antioxidant in meat preservation, cosmetics, and dietary supplements.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Carnosic Acid: 5–20%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Meat preservation, Cosmetics</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Cumin Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Earthy and warm cumin extract with distinctive volatile oil profile. Essential for seasoning blends, curry preparations, and ethnic food products.</p>
+      <table class="spec-table">
+        <tr><td>Volatile Oil</td><td>15–20%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Curries, Seasonings, Snacks</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Garlic Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Pungent garlic extract containing key organosulfur compounds including allicin precursors. Used in savoury food applications, sauces, and functional food products.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Allicin (precursor compounds)</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Savory foods, Sauces, Supplements</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Star Anise Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Licorice-like star anise extract with high trans-anethole content. Used in beverages, confectionery, and traditional herbal formulations worldwide.</p>
+      <table class="spec-table">
+        <tr><td>Active Compound</td><td>Trans-Anethole: &gt;85%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Beverages, Confectionery, Asian Cuisine</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Nutmeg Oleoresin</div>
+      <span class="product-category-tag">Oleoresin</span>
+      <p class="product-overview">Sweet and spicy nutmeg extract with a complex volatile oil profile. Enhances flavour profiles in baked goods, meat processing, and beverage applications.</p>
+      <table class="spec-table">
+        <tr><td>Volatile Oil</td><td>20–30%</td></tr>
+        <tr><td>Extraction</td><td>Solvent Extraction</td></tr>
+        <tr><td>Applications</td><td>Baked goods, Meat processing, Dairy</td></tr>
+        <tr><td>Packaging</td><td>25 kg Drums</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════ POWDERS ═══════════════ -->
+  <div class="category-header">
+    <span>02</span>
+    <span class="cat-line"></span>
+    Standardised Spice Powders
+    <span class="cat-line"></span>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-name">Turmeric Powder</div>
+      <span class="product-category-tag">Powder</span>
+      <p class="product-overview">Fine-ground high-curcumin turmeric powder. Consistent colour, particle size, and microbial specifications for food and nutraceutical applications.</p>
+      <table class="spec-table">
+        <tr><td>Particle Size</td><td>60–80 mesh</td></tr>
+        <tr><td>Process</td><td>Clean, Dry, Grind</td></tr>
+        <tr><td>Applications</td><td>Curries, Health drinks, Supplements</td></tr>
+        <tr><td>Packaging</td><td>25 kg Multi-wall Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Capsicum / Chilli Powder</div>
+      <span class="product-category-tag">Powder</span>
+      <p class="product-overview">Ground capsicum and chilli powders available in various heat levels. Consistent ASTA colour and SHU pungency values for industrial food use.</p>
+      <table class="spec-table">
+        <tr><td>Pungency Range</td><td>Various SHU levels</td></tr>
+        <tr><td>Process</td><td>Grinding</td></tr>
+        <tr><td>Applications</td><td>Spicy dishes, Seasonings, Snacks</td></tr>
+        <tr><td>Packaging</td><td>25 kg Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Black Pepper Powder</div>
+      <span class="product-category-tag">Powder</span>
+      <p class="product-overview">Ground black pepper powder with strong aroma and pungency. Excellent microbial quality, ideal for table spice, blends, and meat processing.</p>
+      <table class="spec-table">
+        <tr><td>Particle Size</td><td>30–60 mesh</td></tr>
+        <tr><td>Process</td><td>Grinding</td></tr>
+        <tr><td>Applications</td><td>Table spice, Meat processing, Blends</td></tr>
+        <tr><td>Packaging</td><td>25 kg Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Ginger Powder</div>
+      <span class="product-category-tag">Powder</span>
+      <p class="product-overview">Ground dried ginger with characteristic warm, spicy flavour. Used in baking, beverages, and health formulations for its digestive benefits.</p>
+      <table class="spec-table">
+        <tr><td>Particle Size</td><td>60–80 mesh</td></tr>
+        <tr><td>Process</td><td>Grinding</td></tr>
+        <tr><td>Applications</td><td>Baking, Beverages, Health products</td></tr>
+        <tr><td>Packaging</td><td>25 kg Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Cardamom Powder</div>
+      <span class="product-category-tag">Powder</span>
+      <p class="product-overview">Finely ground cardamom with intense, sweet aroma. Premium grade material sourced from high-altitude growing regions for maximum volatile oil content.</p>
+      <table class="spec-table">
+        <tr><td>Particle Size</td><td>40–60 mesh</td></tr>
+        <tr><td>Process</td><td>Grinding</td></tr>
+        <tr><td>Applications</td><td>Desserts, Beverages, Baked goods</td></tr>
+        <tr><td>Packaging</td><td>25 kg Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Cumin Powder</div>
+      <span class="product-category-tag">Powder</span>
+      <p class="product-overview">Ground cumin seeds with earthy, warm flavour and high volatile oil content. An essential spice in Mexican, Indian, and Middle Eastern cuisines.</p>
+      <table class="spec-table">
+        <tr><td>Particle Size</td><td>40–60 mesh</td></tr>
+        <tr><td>Process</td><td>Grinding</td></tr>
+        <tr><td>Applications</td><td>Curries, Mexican cuisine, Blends</td></tr>
+        <tr><td>Packaging</td><td>25 kg Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════ WHOLE SPICES ═══════════════ -->
+  <div class="category-header">
+    <span>03</span>
+    <span class="cat-line"></span>
+    Whole &amp; Processed Spices
+    <span class="cat-line"></span>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-name">Whole Dried Chillies</div>
+      <span class="product-category-tag">Whole Spice</span>
+      <p class="product-overview">Whole dried chillies (Genus Capsicum) machine cleaned and sorted by grade. Suitable for direct cooking, industrial extraction, and export.</p>
+      <table class="spec-table">
+        <tr><td>Moisture</td><td>&lt;10%</td></tr>
+        <tr><td>Process</td><td>Sun-dried / Machine-dried</td></tr>
+        <tr><td>Applications</td><td>Cooking, Extraction, Export</td></tr>
+        <tr><td>Packaging</td><td>25 kg Jute bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Dried Turmeric Rhizomes</div>
+      <span class="product-category-tag">Whole Spice</span>
+      <p class="product-overview">Dried whole and split turmeric rhizomes (Erode, Salem, Nizamabad varieties). High curcumin content, suitable for grinding and solvent extraction.</p>
+      <table class="spec-table">
+        <tr><td>Moisture</td><td>&lt;10%</td></tr>
+        <tr><td>Process</td><td>Boiled &amp; Sun-dried</td></tr>
+        <tr><td>Applications</td><td>Grinding, Extraction</td></tr>
+        <tr><td>Packaging</td><td>50 kg Jute bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Black Pepper (Whole)</div>
+      <span class="product-category-tag">Whole Spice</span>
+      <p class="product-overview">Machine-cleaned whole black peppercorns from premium growing regions. High density, strong aroma, and consistent piperine content.</p>
+      <table class="spec-table">
+        <tr><td>Density</td><td>500–600 g/L</td></tr>
+        <tr><td>Process</td><td>Sun-dried &amp; Cleaned</td></tr>
+        <tr><td>Applications</td><td>Grinding, Cooking, Export</td></tr>
+        <tr><td>Packaging</td><td>25 kg Paper bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Cumin Seeds (Whole)</div>
+      <span class="product-category-tag">Whole Spice</span>
+      <p class="product-overview">Premium quality machine-cleaned cumin seeds with high purity. Ideal for tempering, whole spice blends, and as raw material for extraction.</p>
+      <table class="spec-table">
+        <tr><td>Purity</td><td>99%</td></tr>
+        <tr><td>Process</td><td>Machine cleaned</td></tr>
+        <tr><td>Applications</td><td>Tempering, Grinding, Blends</td></tr>
+        <tr><td>Packaging</td><td>25 kg PP bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Coriander Seeds (Whole)</div>
+      <span class="product-category-tag">Whole Spice</span>
+      <p class="product-overview">Whole coriander seeds with distinctive citrusy, nutty aroma. High purity grade used in pickles, curries, and spice blends across global cuisines.</p>
+      <table class="spec-table">
+        <tr><td>Purity</td><td>99%</td></tr>
+        <tr><td>Process</td><td>Machine cleaned</td></tr>
+        <tr><td>Applications</td><td>Curries, Pickles, Blends</td></tr>
+        <tr><td>Packaging</td><td>25 kg PP bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Fenugreek Seeds</div>
+      <span class="product-category-tag">Whole Spice</span>
+      <p class="product-overview">Clean, sorted fenugreek seeds with characteristic bitter, nutty flavour profile. Used in traditional curries, health supplements, and as a functional food ingredient.</p>
+      <table class="spec-table">
+        <tr><td>Purity</td><td>99%</td></tr>
+        <tr><td>Process</td><td>Machine cleaned</td></tr>
+        <tr><td>Applications</td><td>Curries, Pickles, Supplements</td></tr>
+        <tr><td>Packaging</td><td>25 kg PP bags</td></tr>
+        <tr><td>Shelf Life</td><td>24 months</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════ BACK COVER ═══════════════ -->
+  <div class="back-cover">
+    <div class="cover-divider" style="background: linear-gradient(to right, transparent, rgba(193,167,85,0.6), transparent); margin-bottom: 32px;"></div>
+    <h2>Partner with<br/><span>Nature's Best</span></h2>
+    <p>We welcome long-term partnerships with food manufacturers, pharmaceutical companies, cosmetic brands, and trading companies worldwide. Custom extraction, private labelling, and exclusive supply agreements available.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-item-label">Headquarters</div>
+        <div class="contact-item-value">Andhra Pradesh,<br/>India – 500 000</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Website</div>
+        <div class="contact-item-value">sree-krishna-botanicals<br/>.vercel.app</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Export Markets</div>
+        <div class="contact-item-value">USA · Europe · UAE<br/>UK · Asia · Australia</div>
+      </div>
+    </div>
+    <div class="cover-divider" style="background: linear-gradient(to right, transparent, rgba(193,167,85,0.4), transparent); margin-top: 32px;"></div>
+    <div class="cover-year" style="margin-top: 24px; color: rgba(255,255,255,0.3);">© 2026 Sree Krishna Botanicals. All rights reserved. &nbsp;·&nbsp; Catalogue Version 1.0</div>
+  </div>
+
+</body>
+</html>
