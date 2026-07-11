@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { downloadCatalogue } from '../utils/downloadCatalogue';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -73,6 +74,44 @@ export default function Home() {
       { text: "Their spice extracts are potent and pure. A game changer for our formulations.", name: "Priya Sharma", loc: "India" }
     ]
   ];
+
+  // ── Catalogue Download Button ────────────────────────────────
+  const [catalogueDownloading, setCatalogueDownloading] = useState(false);
+
+  const handleCatalogueDownload = async () => {
+    if (catalogueDownloading) return;
+    setCatalogueDownloading(true);
+    try {
+      await downloadCatalogue();
+    } catch (err) {
+      console.error('Catalogue download failed:', err);
+      window.open('/catalogue.html', '_blank');
+    } finally {
+      setCatalogueDownloading(false);
+    }
+  };
+
+  const CatalogueButton = () => (
+    <button
+      onClick={handleCatalogueDownload}
+      disabled={catalogueDownloading}
+      className="bg-white text-[#0b3c1d] border border-[#d4af37] px-[clamp(8px,2vw,32px)] py-[clamp(4px,1vw,12px)] rounded text-[clamp(6px,1.5vw,14px)] font-bold tracking-wide flex items-center justify-center gap-1 lg:gap-2 hover:bg-[#fffdf5] transition-colors shadow-sm disabled:opacity-60 disabled:cursor-wait"
+    >
+      {catalogueDownloading ? (
+        <>
+          <svg className="animate-spin" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#c1a755" strokeWidth="2.5" style={{flexShrink:0}}>
+            <circle cx="12" cy="12" r="10" strokeOpacity="0.25"/>
+            <path d="M12 2a10 10 0 0 1 10 10" strokeLinecap="round"/>
+          </svg>
+          PREPARING...
+        </>
+      ) : (
+        <>
+          DOWNLOAD CATALOGUE <Download size={14} className="text-[#d4af37] w-[clamp(8px,1.5vw,16px)] h-[clamp(8px,1.5vw,16px)]" />
+        </>
+      )}
+    </button>
+  );
 
   return (
     <>
@@ -200,14 +239,7 @@ export default function Home() {
                 >
                   EXPLORE PRODUCTS
                 </Link>
-                <a
-                  href="/catalogue.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-[#0b3c1d] border border-[#d4af37] px-[clamp(8px,2vw,32px)] py-[clamp(4px,1vw,12px)] rounded text-[clamp(6px,1.5vw,14px)] font-bold tracking-wide flex items-center justify-center gap-1 lg:gap-2 hover:bg-[#fffdf5] transition-colors shadow-sm"
-                >
-                  DOWNLOAD CATALOGUE <Download size={14} className="text-[#d4af37] w-[clamp(8px,1.5vw,16px)] h-[clamp(8px,1.5vw,16px)]" />
-                </a>
+                <CatalogueButton />
               </motion.div>
             </div>
 
