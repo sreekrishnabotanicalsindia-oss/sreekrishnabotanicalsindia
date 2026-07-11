@@ -70,7 +70,7 @@ export default function Loader() {
               <img
                 src={logoImg}
                 alt="Sree Krishna Botanicals"
-                className="w-20 h-20 object-contain drop-shadow-lg"
+                className="w-44 h-44 object-contain drop-shadow-lg"
               />
             </motion.div>
 
