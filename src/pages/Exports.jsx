@@ -126,7 +126,7 @@ export default function Exports() {
                       className="rounded-lg shadow-md max-w-xs md:max-w-none w-full h-auto object-cover border-4 border-white"
                   />
               </div>
-            </div>
+            </ScrollReveal>
 
           </div>
         </div>

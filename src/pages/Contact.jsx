@@ -116,7 +116,7 @@ export default function Contact() {
                     className="w-full h-full object-cover mix-blend-multiply rounded-tl-3xl opacity-50"
                  />
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Column 2: Send Us a Message */}
             <ScrollReveal variant="fadeRight" delay={0.2} className="w-full lg:w-5/12">
@@ -219,7 +219,7 @@ export default function Contact() {
                     <span>We respect your privacy. Your information is safe with us.</span>
                 </div>
               </form>
-            </div>
+            </ScrollReveal>
 
             {/* Column 3: Business Hours */}
             <div className="w-full lg:w-3/12">
