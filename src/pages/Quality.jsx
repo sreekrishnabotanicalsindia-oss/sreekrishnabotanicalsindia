@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Leaf, Search, TestTube, Filter, ShieldCheck, Box, CheckCircle2, Award, Droplet, Globe, ThumbsUp, Activity, FlaskConical, FileCheck } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 import qualityHeroImg from '../assets/Quality hero.png';
 import advancedTestingImg from '../assets/advanced_testing_lab.png';
 import expertTeamImg from '../assets/expert_team_scientists.png';
@@ -70,7 +71,7 @@ export default function Quality() {
       {/* Quality Assurance Timeline */}
       <section className="py-16 md:py-24 bg-white relative">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
+          <ScrollReveal className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="w-16 h-px bg-[#c1a755]"></div>
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#0d4f26]">
@@ -81,7 +82,7 @@ export default function Quality() {
             <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
               From raw material selection to final packaging, our robust quality assurance system ensures purity, potency and safety.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="relative">
             {/* Dotted Line (Desktop) */}
@@ -89,18 +90,17 @@ export default function Quality() {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8 md:gap-8 relative z-10">
               {qaSteps.map((step, idx) => (
-                <div key={step.id} className="flex flex-col items-center text-center relative group">
+                <ScrollReveal key={step.id} variant="fadeUp" delay={idx * 0.08} className="flex flex-col items-center text-center relative group">
                   <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white border-2 border-[#e5eadf] shadow-sm flex items-center justify-center mb-3 md:mb-6 group-hover:border-[#0d4f26] transition-colors duration-300 relative z-10">
                     <step.icon className="text-[#0d4f26] w-6 h-6 md:w-8 md:h-8" />
                   </div>
-
                   <h3 className="font-bold text-[#0d4f26] text-xs md:text-sm lg:text-base mb-2 md:mb-3 max-w-[150px]">
                     {step.id}. {step.title}
                   </h3>
                   <p className="text-gray-500 text-[10px] md:text-xs lg:text-sm leading-relaxed max-w-[160px]">
                     {step.desc}
                   </p>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Quality() {
           <div className="flex flex-col gap-10">
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Left: Our Quality Standards */}
-              <div className="w-full lg:w-1/2 bg-[#f6f8f4] rounded-2xl p-8 flex flex-col border border-[#e5eadf]">
+              <ScrollReveal variant="fadeLeft" className="w-full lg:w-1/2 bg-[#f6f8f4] rounded-2xl p-8 flex flex-col border border-[#e5eadf]">
                 <h3 className="text-xl font-serif font-bold text-[#0d4f26] mb-6">Our Quality Standards</h3>
                 <ul className="space-y-4">
                   {standards.map((std, i) => (
@@ -123,10 +123,10 @@ export default function Quality() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </ScrollReveal>
 
               {/* Right: We Ensure */}
-              <div className="w-full lg:w-1/2 bg-[#f6f8f4] rounded-2xl p-8 flex flex-col border border-[#e5eadf] relative overflow-hidden">
+              <ScrollReveal variant="fadeRight" delay={0.1} className="w-full lg:w-1/2 bg-[#f6f8f4] rounded-2xl p-8 flex flex-col border border-[#e5eadf] relative overflow-hidden">
                 {/* Subtle Watermark icon */}
                 <FlaskConical className="absolute -bottom-10 -right-10 text-white/40 w-64 h-64 pointer-events-none" />
                 
@@ -139,46 +139,20 @@ export default function Quality() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </ScrollReveal>
             </div>
 
             {/* Middle: 3 Image Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                {/* Card 1 */}
-                <div className="flex flex-col rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                  <div className="flex-1 min-h-[160px]">
-                    <img src={advancedTestingImg} alt="Advanced Testing" className="w-full h-full object-cover" />
-                  </div>
+              {[{src: advancedTestingImg, alt: 'Advanced Testing', title: 'Advanced Testing', desc: 'Our state-of-the-art laboratories are equipped with cutting-edge technology for precise botanical analysis. Every batch undergoes rigorous testing for purity, potency, and safety to ensure maximum efficacy.'}, {src: expertTeamImg, alt: 'Expert Team', title: 'Expert Team', desc: 'Our skilled professionals bring decades of experience in botanical sciences and quality control. They meticulously oversee every step of the process, ensuring the highest global quality benchmarks are met.'}, {src: hygienicFacilitiesImg, alt: 'Hygienic Facilities', title: 'Hygienic Facilities', desc: 'Our modern processing facilities are designed around strict hygiene and safety protocols. We maintain an immaculate environment to prevent contamination and preserve the natural integrity of our extracts.'}].map((card, i) => (
+                <ScrollReveal key={card.title} variant="zoomInSlight" delay={i * 0.12} className="flex flex-col rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                  <div className="flex-1 min-h-[160px]"><img src={card.src} alt={card.alt} className="w-full h-full object-cover" /></div>
                   <div className="bg-[#0d4f26] text-white p-6 text-center flex flex-col justify-center min-h-[140px]">
-                    <h4 className="font-bold text-xl mb-3 text-white underline underline-offset-4 decoration-[#c1a755]">Advanced Testing</h4>
-                    <p className="text-xs text-gray-200 leading-relaxed">Our state-of-the-art laboratories are equipped with cutting-edge technology for precise botanical analysis. Every batch undergoes rigorous testing for purity, potency, and safety to ensure maximum efficacy.</p>
+                    <h4 className="font-bold text-xl mb-3 text-white underline underline-offset-4 decoration-[#c1a755]">{card.title}</h4>
+                    <p className="text-xs text-gray-200 leading-relaxed">{card.desc}</p>
                   </div>
-                </div>
-
-                {/* Card 2 */}
-                <div className="flex flex-col rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                  <div className="flex-1 min-h-[160px]">
-                    <img src={expertTeamImg} alt="Expert Team" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="bg-[#0d4f26] text-white p-6 text-center flex flex-col justify-center min-h-[140px]">
-                    <h4 className="font-bold text-xl mb-3 text-white underline underline-offset-4 decoration-[#c1a755]">Expert Team</h4>
-                    <p className="text-xs text-gray-200 leading-relaxed">Our skilled professionals bring decades of experience in botanical sciences and quality control. They meticulously oversee every step of the process, ensuring the highest global quality benchmarks are met.</p>
-                  </div>
-                </div>
-
-                {/* Card 3 */}
-                <div className="flex flex-col rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                  <div className="flex-1 min-h-[160px]">
-                    <img src={hygienicFacilitiesImg} alt="Hygienic Facilities" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="bg-[#0d4f26] text-white p-6 text-center flex flex-col justify-center min-h-[140px]">
-                    <h4 className="font-bold text-xl mb-3 text-white underline underline-offset-4 decoration-[#c1a755]">Hygienic Facilities</h4>
-                    <p className="text-xs text-gray-200 leading-relaxed">Our modern processing facilities are designed around strict hygiene and safety protocols. We maintain an immaculate environment to prevent contamination and preserve the natural integrity of our extracts.</p>
-                  </div>
-                </div>
-
-            </div>
+                </ScrollReveal>
+              ))}</div>
           </div>
         </div>
       </section>

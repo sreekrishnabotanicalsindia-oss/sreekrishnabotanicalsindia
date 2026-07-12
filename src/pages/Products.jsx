@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ChevronDown, ChevronUp, Droplet, Leaf, Package, ArrowRight, ArrowRightCircle } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 import { products } from '../data/products';
 import productsHeroImg from '../assets/Products -hero.png';
 
@@ -251,23 +252,25 @@ export default function Products() {
               {/* Oleoresins Grid */}
               {(activeCategory === 'All' || activeCategory === 'Oleoresins') && oleoresins.length > 0 && (
                 <div>
-                  <div className="flex items-center gap-3 mb-6">
+                  <ScrollReveal className="flex items-center gap-3 mb-6">
                     <h2 className="text-2xl font-bold text-[#0d4f26]">Oleoresins</h2>
                     <div className="flex-grow max-w-[50px] h-px bg-gradient-to-r from-[#c1a755] to-transparent"></div>
                     <Droplet className="text-[#c1a755] fill-[#c1a755] -ml-2" size={12} />
-                  </div>
+                  </ScrollReveal>
                   
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                    {oleoresins.map(product => (
-                      <Link to={`/products/${product.id}`} key={product.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow cursor-pointer flex flex-col group">
-                        <div className="aspect-square bg-[#f5f8f5] rounded-xl mb-3 overflow-hidden">
-                          <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                        </div>
-                        <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight">{product.name} <br/>Oleoresin</h4>
-                        <div className="mt-auto pt-3 flex justify-end">
-                          <ArrowRightCircle className="text-[#81bd94] group-hover:text-[#0d4f26] transition-colors" size={20} strokeWidth={1.5} />
-                        </div>
-                      </Link>
+                    {oleoresins.map((product, idx) => (
+                      <ScrollReveal key={product.id} variant="zoomInSlight" delay={idx * 0.05}>
+                        <Link to={`/products/${product.id}`} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow cursor-pointer flex flex-col group">
+                          <div className="aspect-square bg-[#f5f8f5] rounded-xl mb-3 overflow-hidden">
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                          </div>
+                          <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight">{product.name} <br/>Oleoresin</h4>
+                          <div className="mt-auto pt-3 flex justify-end">
+                            <ArrowRightCircle className="text-[#81bd94] group-hover:text-[#0d4f26] transition-colors" size={20} strokeWidth={1.5} />
+                          </div>
+                        </Link>
+                      </ScrollReveal>
                     ))}
                   </div>
                 </div>
@@ -276,23 +279,25 @@ export default function Products() {
               {/* Powders Grid */}
               {(activeCategory === 'All' || activeCategory === 'Powders') && powders.length > 0 && (
                 <div>
-                  <div className="flex items-center gap-3 mb-6">
+                  <ScrollReveal className="flex items-center gap-3 mb-6">
                     <h2 className="text-2xl font-bold text-[#0d4f26]">Powder Items</h2>
                     <div className="flex-grow max-w-[50px] h-px bg-gradient-to-r from-[#c1a755] to-transparent"></div>
                     <Droplet className="text-[#c1a755] fill-[#c1a755] -ml-2" size={12} />
-                  </div>
+                  </ScrollReveal>
                   
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                    {powders.map(product => (
-                      <Link to={`/products/${product.id}`} key={product.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow cursor-pointer flex flex-col group">
-                        <div className="aspect-square bg-[#fcf8f0] rounded-xl mb-3 overflow-hidden">
-                          <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                        </div>
-                        <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight">{product.name} <br/>Powder</h4>
-                        <div className="mt-auto pt-3 flex justify-end">
-                          <ArrowRightCircle className="text-[#81bd94] group-hover:text-[#0d4f26] transition-colors" size={20} strokeWidth={1.5} />
-                        </div>
-                      </Link>
+                    {powders.map((product, idx) => (
+                      <ScrollReveal key={product.id} variant="zoomInSlight" delay={idx * 0.05}>
+                        <Link to={`/products/${product.id}`} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow cursor-pointer flex flex-col group">
+                          <div className="aspect-square bg-[#fcf8f0] rounded-xl mb-3 overflow-hidden">
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                          </div>
+                          <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight">{product.name} <br/>Powder</h4>
+                          <div className="mt-auto pt-3 flex justify-end">
+                            <ArrowRightCircle className="text-[#81bd94] group-hover:text-[#0d4f26] transition-colors" size={20} strokeWidth={1.5} />
+                          </div>
+                        </Link>
+                      </ScrollReveal>
                     ))}
                   </div>
                 </div>

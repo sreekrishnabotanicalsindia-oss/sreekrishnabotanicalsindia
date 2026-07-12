@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Leaf, Globe, ShieldCheck, Award, CheckCircle2, ClipboardList, FlaskConical, FileText, Factory, Box, Plane, HeartHandshake, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ScrollReveal from '../components/ScrollReveal';
 import exportHeroImg from '../assets/export hero image.png';
 import globalPartnersImg from '../assets/ChatGPT Image Jul 11, 2026, 06_45_03 PM.png';
 import ctaBannerBgImg from '../assets/ChatGPT Image Jul 11, 2026, 06_53_00 PM.png';
@@ -49,7 +50,7 @@ export default function Exports() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             
             {/* Left Column: Global Reach */}
-            <div className="w-full lg:w-1/2">
+            <ScrollReveal variant="fadeLeft" className="w-full lg:w-1/2">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#0d4f26] mb-6 flex items-center gap-3">
                 Global Reach, Natural Impact
               </h2>
@@ -87,10 +88,10 @@ export default function Exports() {
                   <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">Client Satisfaction</p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right Column: Why Global Partners Choose Us */}
-            <div className="w-full lg:w-1/2 bg-[#f6f8f4] rounded-2xl p-8 relative overflow-hidden flex flex-col md:flex-row items-center border border-[#e5eadf]">
+            <ScrollReveal variant="fadeRight" delay={0.15} className="w-full lg:w-1/2 bg-[#f6f8f4] rounded-2xl p-8 relative overflow-hidden flex flex-col md:flex-row items-center border border-[#e5eadf]">
               <div className="w-full md:w-3/5 z-10 relative">
                   <h3 className="text-xl md:text-2xl font-serif font-bold text-[#0d4f26] mb-6">Why Global Partners Choose Us</h3>
                   <ul className="space-y-3">

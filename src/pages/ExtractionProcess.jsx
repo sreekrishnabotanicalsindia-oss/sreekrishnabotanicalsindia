@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Leaf, Wind, Activity, Filter, Box, Droplets, Droplet, Settings, ShieldCheck, Package, Globe, Zap } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 import heroImage from '../assets/Extraction process hero image.png';
 import imgRawMaterials from '../assets/step_1_raw_materials.png';
 import imgCleaning from '../assets/step_2_cleaning.png';
@@ -66,7 +67,7 @@ export default function ExtractionProcess() {
       <section className="bg-white pt-8 pb-16">
         <div className="container mx-auto px-4 max-w-[1400px]">
           
-          <div className="text-center mb-16">
+          <ScrollReveal className="text-center mb-16">
             <div className="flex items-center gap-3 justify-center mb-1">
               <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#c1a755]"></div>
               <h2 className="text-2xl font-bold text-[#0d4f26]">Our Extraction Process</h2>
@@ -74,7 +75,7 @@ export default function ExtractionProcess() {
             </div>
             <Droplet className="text-[#c1a755] fill-[#c1a755] mx-auto mt-1 mb-3" size={12} />
             <p className="text-gray-600 text-sm">From nature to purity – a seamless journey of quality and care.</p>
-          </div>
+          </ScrollReveal>
 
           {/* Timeline Row */}
           <div className="relative max-w-7xl mx-auto">
@@ -82,14 +83,9 @@ export default function ExtractionProcess() {
             <div className="hidden lg:block absolute top-[15px] left-12 right-12 h-px border-t border-dashed border-[#81bd94] z-0"></div>
 
             <div className="flex flex-row flex-nowrap overflow-x-auto lg:overflow-x-visible justify-between gap-4 pb-8 lg:pb-0 scrollbar-hide px-2">
-              {steps.map((step) => (
-                <div key={step.id} className="flex flex-col items-center text-center w-[120px] shrink-0 relative">
-                  {/* Circle Number */}
-                  <div className="w-8 h-8 rounded-full bg-[#0d4f26] text-white font-bold flex items-center justify-center text-sm mb-6 z-10 shadow-md">
-                    {step.id}
-                  </div>
-                  
-                  {/* Image Container with icon */}
+              {steps.map((step, idx) => (
+                <ScrollReveal key={step.id} variant="fadeUp" delay={idx * 0.07} className="flex flex-col items-center text-center w-[120px] shrink-0 relative">
+                  <div className="w-8 h-8 rounded-full bg-[#0d4f26] text-white font-bold flex items-center justify-center text-sm mb-6 z-10 shadow-md">{step.id}</div>
                   <div className="relative mb-6">
                     <div className="w-[100px] h-[100px] rounded-xl overflow-hidden shadow-sm border-2 border-white ring-1 ring-gray-100">
                       <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
@@ -98,12 +94,10 @@ export default function ExtractionProcess() {
                       <step.icon size={16} strokeWidth={2} />
                     </div>
                   </div>
-
                   <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight mb-2 h-8 flex items-center justify-center">{step.title}</h4>
                   <p className="text-gray-500 text-[10px] leading-snug px-1">{step.desc}</p>
-                </div>
-              ))}
-            </div>
+                </ScrollReveal>
+              ))}            </div>
           </div>
 
         </div>

@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { MapPin, Phone, Mail, Globe, Send, ShieldCheck, Clock, Headset, Award, HeartHandshake, FlaskConical } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 import contactHeroImg from '../assets/contact us hero.png';
 import leavesDecorImg from '../assets/ChatGPT Image Jul 11, 2026, 06_35_18 PM.png';
 
@@ -45,7 +46,7 @@ export default function Contact() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             
             {/* Column 1: Get in Touch */}
-            <div className="w-full lg:w-1/3 relative pb-20 lg:pb-0">
+            <ScrollReveal variant="fadeLeft" className="w-full lg:w-1/3 relative pb-20 lg:pb-0">
               <h3 className="text-2xl font-serif font-bold text-[#0d4f26] mb-10 border-b border-gray-100 pb-6">Get in Touch</h3>
               
               <div className="space-y-8">
@@ -118,7 +119,7 @@ export default function Contact() {
             </div>
 
             {/* Column 2: Send Us a Message */}
-            <div className="w-full lg:w-5/12">
+            <ScrollReveal variant="fadeRight" delay={0.2} className="w-full lg:w-5/12">
               <h3 className="text-2xl font-serif font-bold text-[#0d4f26] mb-10">Send Us a Message</h3>
               
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
