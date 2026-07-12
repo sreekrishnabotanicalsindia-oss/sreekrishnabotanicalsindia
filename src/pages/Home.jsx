@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import ScrollReveal from '../components/ScrollReveal';
 import {
   ArrowRight,
   MessageSquare,
@@ -249,7 +250,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16">
 
             {/* Left Images */}
-            <div className="w-full lg:w-1/2 flex gap-4 h-[450px]">
+            <ScrollReveal variant="fadeLeft" className="w-full lg:w-1/2 flex gap-4 h-[450px]">
               {/* Main Large Image */}
               <div className="w-2/3 h-full relative rounded-tl-[80px] rounded-br-[80px] overflow-hidden shadow-xl border-b-[6px] border-l-[6px] border-[#c1a755]">
                 <img
@@ -274,10 +275,10 @@ export default function Home() {
                   <img src={aboutFarmerImg} alt="Farmer" className="w-full h-full object-cover" />
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right Content */}
-            <div className="w-full lg:w-1/2">
+            <ScrollReveal variant="fadeRight" delay={0.15} className="w-full lg:w-1/2">
               <span className="text-[#a88931] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">ABOUT US</span>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#0d4f26] leading-tight mb-6">
                 Bringing Nature's <br /> Finest to the World
@@ -322,7 +323,7 @@ export default function Home() {
                 </div>
               </div>
 
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -331,19 +332,18 @@ export default function Home() {
       <section className="pt-4 pb-16 md:py-12 bg-[#fcfdfa]">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
 
-          {/* Header */}
-          <div className="text-center mb-12">
+          <ScrollReveal className="text-center mb-12">
             <span className="text-[#8b9185] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">OUR PRODUCTS</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-[#0d4f26]">
               Wide Range of Natural Products
             </h2>
-          </div>
+          </ScrollReveal>
 
           {/* Product Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
 
             {/* Card 1: Oleoresins */}
-            <div className="group relative h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden shadow-lg border-2 border-transparent hover:border-[#0d4f26] transition-all duration-300">
+            <ScrollReveal variant="zoomInSlight" delay={0} className="group relative h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden shadow-lg border-2 border-transparent hover:border-[#0d4f26] transition-all duration-300">
               <img
                 src={oleoresinsImg}
                 alt="Oleoresins"
@@ -362,10 +362,10 @@ export default function Home() {
                   VIEW PRODUCTS <ArrowRight size={14} className="text-[#d4af37]" />
                 </button>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Card 2: Powder Items */}
-            <div className="group relative h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden shadow-lg border-2 border-transparent hover:border-[#0d4f26] transition-all duration-300">
+            <ScrollReveal variant="zoomInSlight" delay={0.1} className="group relative h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden shadow-lg border-2 border-transparent hover:border-[#0d4f26] transition-all duration-300">
               <img
                 src={powderItemsImg}
                 alt="Powder Items"
@@ -381,10 +381,10 @@ export default function Home() {
                   VIEW PRODUCTS <ArrowRight size={14} className="text-[#d4af37]" />
                 </button>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Card 3: Whole Spices */}
-            <div className="group relative h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden shadow-lg border-2 border-transparent hover:border-[#0d4f26] transition-all duration-300">
+            <ScrollReveal variant="zoomInSlight" delay={0.2} className="group relative h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden shadow-lg border-2 border-transparent hover:border-[#0d4f26] transition-all duration-300">
               <img
                 src={wholeSpicesImg}
                 alt="Whole Spices"
@@ -400,7 +400,7 @@ export default function Home() {
                   VIEW PRODUCTS <ArrowRight size={14} className="text-[#d4af37]" />
                 </button>
               </div>
-            </div>
+            </ScrollReveal>
 
           </div>
 
@@ -430,12 +430,12 @@ export default function Home() {
               />
             </div>
 
-            <div className="relative z-10 text-center mb-8">
+            <ScrollReveal className="relative z-10 text-center mb-8">
               <span className="text-[#c1a755] text-xs font-bold tracking-[0.2em] uppercase mb-1 block">OUR PROCESS</span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-white">
                 Advanced Extraction Process
               </h2>
-            </div>
+            </ScrollReveal>
 
             {/* Timeline */}
             <div className="relative z-10 flex overflow-x-auto flex-nowrap md:flex-row md:flex-wrap justify-start md:justify-between items-start md:items-center gap-8 md:gap-0 w-full px-2 lg:px-6 mx-auto mb-10 pb-4 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -478,12 +478,12 @@ export default function Home() {
       {/* Industries We Serve Section */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
-          <div className="text-center mb-8 md:mb-12">
+          <ScrollReveal className="text-center mb-8 md:mb-12">
             <span className="text-[#8b9185] text-xs font-bold tracking-[0.2em] uppercase mb-1 md:mb-2 block">INDUSTRIES WE SERVE</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-[#0d4f26]">
               Natural Solutions for Various Industries
             </h2>
-          </div>
+          </ScrollReveal>
 
           <div className="flex overflow-x-auto flex-nowrap md:flex-wrap justify-start md:justify-center items-start md:items-center gap-6 md:gap-14 max-w-6xl mx-auto pb-4 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {[
@@ -514,7 +514,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-8">
 
             {/* Left Content */}
-            <div className="w-full lg:w-1/3 flex flex-col justify-center">
+            <ScrollReveal variant="fadeLeft" className="w-full lg:w-1/3 flex flex-col justify-center">
               <span className="text-[#8b9185] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">WHY CHOOSE US?</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-[#0d4f26] mb-8 leading-tight">
                 Excellence in Every Drop & Every Grain
@@ -535,36 +535,20 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
 
             {/* Right Cards */}
             <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  img: qualityImg,
-                  title: "Quality\nAssurance",
-                  desc: "Rigorous testing at every stage ensures consistent quality."
-                },
-                {
-                  img: sustainabilityImg,
-                  title: "Sustainability\n& Ethics",
-                  desc: "We care for nature and empower our farmers."
-                },
-                {
-                  img: globalReachImg,
-                  title: "Global Reach",
-                  desc: "Exporting to 50+ countries with trust and reliability."
-                }
-              ].map((card, idx) => (
-                <div key={idx} className="bg-white rounded-[24px] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full border border-gray-100">
+              {[{img:qualityImg,title:'Quality\nAssurance',desc:'Rigorous testing at every stage ensures consistent quality.'},{img:sustainabilityImg,title:'Sustainability\n& Ethics',desc:'We care for nature and empower our farmers.'},{img:globalReachImg,title:'Global Reach',desc:'Exporting to 50+ countries with trust and reliability.'}].map((card, idx) => (
+                <ScrollReveal key={idx} variant="zoomInSlight" delay={idx * 0.12} className="bg-white rounded-[24px] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full border border-gray-100">
                   <div className="h-48 w-full overflow-hidden p-3 pb-0">
-                    <img src={card.img} alt={card.title.replace('\n', ' ')} className="w-full h-full object-cover rounded-[20px]" />
+                    <img src={card.img} alt={card.title.replace('\n',' ')} className="w-full h-full object-cover rounded-[20px]" />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h4 className="text-xl font-bold text-[#0d4f26] mb-3 whitespace-pre-line leading-tight">{card.title}</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">{card.desc}</p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
 
@@ -577,7 +561,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="relative rounded-[32px] overflow-hidden bg-[#063318] p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-10">
             {/* Left Content */}
-            <div className="w-full lg:w-2/5 flex flex-col relative z-10">
+            <ScrollReveal variant="fadeLeft" className="w-full lg:w-2/5 flex flex-col relative z-10">
               <span className="text-[#c1a755] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">GLOBAL PRESENCE</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-10 leading-tight">
                 Exporting Nature's Goodness Across the World
@@ -599,7 +583,7 @@ export default function Home() {
                   <span className="text-white text-xs md:text-sm font-medium">On-time Delivery</span>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right Map Image (Simulated with generic map background) */}
             <div className="w-full lg:w-3/5 relative z-10 flex justify-end">
@@ -612,12 +596,12 @@ export default function Home() {
       {/* Our Certifications Section */}
       <section className="py-16 bg-[#fcfdfa]">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
-          <div className="text-center mb-12">
+          <ScrollReveal className="text-center mb-12">
             <span className="text-[#8b9185] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">OUR CERTIFICATIONS</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-[#0d4f26]">
               Certified Quality You Can Trust
             </h2>
-          </div>
+          </ScrollReveal>
 
           <div className="flex overflow-x-auto flex-nowrap md:flex-wrap justify-start md:justify-center gap-4 md:gap-6 max-w-6xl mx-auto mb-12 pb-4 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {/* Since we don't have the actual logo images, we simulate them elegantly with pure CSS */}
@@ -690,9 +674,9 @@ export default function Home() {
       {/* What Our Clients Say Section */}
       <section className="py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
-          <div className="text-center mb-10">
+          <ScrollReveal className="text-center mb-10">
             <span className="text-[#4a5d23] text-xs font-bold tracking-[0.2em] uppercase mb-2 block">WHAT OUR CLIENTS SAY</span>
-          </div>
+          </ScrollReveal>
 
           {/* Mobile Reviews: Google Style Auto Scroll */}
           <div className="md:hidden overflow-hidden w-full">

@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Droplet, ShieldCheck, Leaf, Award, Target, Eye, Diamond, Globe, Users, Package, Sprout, ThumbsUp, FlaskConical, Globe2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ScrollReveal from '../components/ScrollReveal';
 import aboutHero from '../assets/about-hero.png';
 import aboutCtaImg from '../assets/about cta image.png';
 import aboutQualityImg from '../assets/about_quality_scientist.png';
@@ -154,7 +155,7 @@ export default function About() {
             </div>
 
             {/* Mission */}
-            <div className="flex flex-col md:flex-row gap-4 lg:border-r border-gray-200 pr-4">
+            <ScrollReveal variant="fadeUp" delay={0} className="flex flex-col md:flex-row gap-4 lg:border-r border-gray-200 pr-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 rounded-full bg-[#0d4f26] flex items-center justify-center">
                   <Target className="text-[#c1a755]" size={32} />
@@ -166,10 +167,10 @@ export default function About() {
                   To deliver nature's finest botanical extracts with uncompromising quality, purity and value, while creating long-term partnerships across global markets.
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Vision */}
-            <div className="flex flex-col md:flex-row gap-4 lg:border-r border-gray-200 pr-4">
+            <ScrollReveal variant="fadeUp" delay={0.1} className="flex flex-col md:flex-row gap-4 lg:border-r border-gray-200 pr-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 rounded-full bg-[#0d4f26] flex items-center justify-center">
                   <Eye className="text-[#c1a755]" size={32} />
@@ -181,10 +182,10 @@ export default function About() {
                   To become a trusted global leader in natural extracts and spice ingredients, recognized for our innovation, integrity and commitment to a sustainable future.
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Values */}
-            <div className="flex flex-col md:flex-row gap-4">
+            <ScrollReveal variant="fadeUp" delay={0.2} className="flex flex-col md:flex-row gap-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 rounded-full bg-[#0d4f26] flex items-center justify-center">
                   <Diamond className="text-[#c1a755]" size={32} />
@@ -200,7 +201,7 @@ export default function About() {
                   <li>Customer Success</li>
                 </ul>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -211,7 +212,7 @@ export default function About() {
           <div className="bg-[#0a4a22] rounded-3xl p-10 flex flex-col items-center">
             <h3 className="text-[#c1a755] text-sm font-bold tracking-widest uppercase mb-10 text-center">Sree Krishna Botanicals In Numbers</h3>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full">
+            <ScrollReveal className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full">
               {/* Stat 1 */}
               <div className="flex flex-col items-center text-center group border-r border-[#1a6635] last:border-0 border-transparent lg:border-[#1a6635]">
                 <Globe className="text-[#c1a755] mb-4" size={40} strokeWidth={1.5} />
@@ -253,7 +254,7 @@ export default function About() {
                 <span className="text-white font-bold text-3xl mb-1">99%</span>
                 <span className="text-gray-300 text-sm font-medium">Customer Satisfaction</span>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -264,16 +265,16 @@ export default function About() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
             {/* Left Image */}
-            <div className="w-full lg:w-1/2">
+            <ScrollReveal variant="fadeLeft" className="w-full lg:w-1/2">
               <img
                 src={aboutSustainabilityImg}
                 alt="Sustainability at Sree Krishna Botanicals"
                 className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-xl"
               />
-            </div>
+            </ScrollReveal>
 
             {/* Right Content */}
-            <div className="w-full lg:w-1/2 flex flex-col relative z-10">
+            <ScrollReveal variant="fadeRight" delay={0.15} className="w-full lg:w-1/2 flex flex-col relative z-10">
               <span className="text-[#327a48] font-bold text-xs tracking-widest uppercase mb-4">ROOTED IN NATURE. COMMITTED TO A BETTER TOMORROW.</span>
               <h2 className="text-[#0d4f26] font-heading font-bold text-3xl lg:text-[2.5rem] leading-[1.2] mb-12">
                 Sustainability is at the <br /> Heart of What We Do
@@ -332,7 +333,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
           </div>
         </div>
@@ -349,13 +350,13 @@ export default function About() {
               <img src={aboutCtaImg} alt="Sree Krishna Botanicals CTA" className="w-full h-auto object-contain drop-shadow-2xl" />
             </div>
 
-            <div className="z-10 text-center md:text-left flex-1 max-w-3xl">
+            <ScrollReveal variant="fadeLeft" className="z-10 text-center md:text-left flex-1 max-w-3xl">
               <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-light leading-snug">
                 At Sree Krishna Botanicals, we don't just extract goodness from nature,
                 <br className="hidden lg:block mb-3" />
                 <span className="text-[#c1a755] font-bold block mt-2 md:mt-4">we deliver trust, quality and a healthier world.</span>
               </h3>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
