@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import ScrollReveal from '../components/ScrollReveal';
 import { 
   ChevronRight, Leaf, Award, Globe, ShieldCheck, 
   Droplet, CheckCircle2, User, Mail, Building, 
@@ -103,7 +104,7 @@ export default function ProductDetails() {
 
         <div className="container mx-auto px-4 lg:px-8 py-10">
           
-          <div className="flex flex-col lg:flex-row gap-10 bg-white p-6 md:p-10 rounded-[30px] shadow-sm border border-gray-100">
+          <ScrollReveal variant="fadeUp" className="flex flex-col lg:flex-row gap-10 bg-white p-6 md:p-10 rounded-[30px] shadow-sm border border-gray-100">
             
             {/* Left Column: Image Gallery */}
             <div className="w-full lg:w-[45%] flex flex-col sm:flex-row gap-4">
@@ -252,10 +253,10 @@ export default function ProductDetails() {
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* Bottom Section: Tabs & At a Glance */}
-          <div className="mt-8 flex flex-col lg:flex-row gap-8">
+          <ScrollReveal variant="fadeUp" delay={0.1} className="mt-8 flex flex-col lg:flex-row gap-8">
             
             {/* Tabs Area */}
             <div className="w-full lg:w-2/3 bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
@@ -429,10 +430,10 @@ export default function ProductDetails() {
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* Bottom Features Bar */}
-          <div className="mt-8 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+          <ScrollReveal variant="fadeUp" delay={0.2} className="mt-8 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               <div className="flex items-center gap-3">
                 <Leaf className="text-brand-primaryGreen shrink-0" size={28} />
@@ -470,7 +471,7 @@ export default function ProductDetails() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>
