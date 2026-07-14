@@ -135,7 +135,7 @@ export default function ProductDetails() {
                 {product.name} {product.category === 'Oleoresins' ? 'Oleoresin' : product.category === 'Powders' ? 'Powder' : ''}
               </h1>
               
-              <div className="flex items-center justify-center gap-2 mb-6 opacity-30">
+              <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
                 <Droplet className="text-brand-gold fill-brand-gold" size={16} />
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
