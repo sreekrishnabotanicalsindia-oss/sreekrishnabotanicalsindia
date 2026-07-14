@@ -212,21 +212,7 @@ export default function About() {
           <div className="bg-[#0a4a22] rounded-3xl p-10 flex flex-col items-center">
             <h3 className="text-[#c1a755] text-sm font-bold tracking-widest uppercase mb-10 text-center">Sree Krishna Botanicals In Numbers</h3>
 
-            <ScrollReveal className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full">
-              {/* Stat 1 */}
-              <div className="flex flex-col items-center text-center group border-r border-[#1a6635] last:border-0 border-transparent lg:border-[#1a6635]">
-                <Globe className="text-[#c1a755] mb-4" size={40} strokeWidth={1.5} />
-                <span className="text-white font-bold text-3xl mb-1">50+</span>
-                <span className="text-gray-300 text-sm font-medium">Countries Exported</span>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="flex flex-col items-center text-center group border-r border-[#1a6635] last:border-0 border-transparent lg:border-[#1a6635]">
-                <Users className="text-[#c1a755] mb-4" size={40} strokeWidth={1.5} />
-                <span className="text-white font-bold text-3xl mb-1">500+</span>
-                <span className="text-gray-300 text-sm font-medium">Happy Clients</span>
-              </div>
-
+            <ScrollReveal className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 w-full">
               {/* Stat 3 */}
               <div className="flex flex-col items-center text-center group border-r border-[#1a6635] last:border-0 border-transparent lg:border-[#1a6635]">
                 <Package className="text-[#c1a755] mb-4" size={40} strokeWidth={1.5} />

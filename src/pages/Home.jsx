@@ -214,11 +214,8 @@ export default function Home() {
         <div className="bg-[#063318] rounded-2xl p-4 py-5 sm:p-6 md:p-8 lg:p-10 shadow-2xl grid grid-cols-3 md:flex md:flex-wrap md:justify-between items-start md:items-center gap-y-6 gap-x-2 md:gap-6 border-b-4 border-brand-primaryGreen">
 
           {[
-            { icon: Globe, count: "50+", label: "Countries\nExported" },
-            { icon: Smile, count: "500+", label: "Happy\nClients" },
             { icon: Box, count: "100+", label: "Products" },
             { icon: Sprout, count: "1000+", label: "Farmers\nNetwork" },
-            { icon: CalendarDays, count: "15+", label: "Years\nExperience" },
             { icon: Smile, count: "99%", label: "Customer\nSatisfaction" }
           ].map((stat, idx) => (
             <div key={idx} className="flex flex-col items-center justify-start text-center flex-1 md:min-w-[120px] relative">
