@@ -150,7 +150,7 @@ export default function ProductDetails() {
               
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
-                <RealisticDrop className="text-brand-gold" size={16} />
+                <RealisticDrop className="text-brand-lightGold drop-shadow-[0_0_4px_rgba(245,216,122,0.6)]" size={18} />
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
               </div>
 
