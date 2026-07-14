@@ -40,10 +40,10 @@ export default function ProductDetails() {
     );
   }
 
-  // Generate mock thumbnails based on the main image
+  // Generate thumbnails based on the main image and optional thumbnail
   const thumbnails = [
     product.image,
-    product.image + '&auto=format&fit=crop&w=400&q=60'
+    product.thumbnail || product.image + '&auto=format&fit=crop&w=400&q=60'
   ];
 
   const tabs = [

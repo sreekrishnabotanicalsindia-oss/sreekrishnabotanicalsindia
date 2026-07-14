@@ -2,7 +2,8 @@ export const products = [
   // Oleoresins
   {
     id: "o1", name: "Turmeric", botanicalName: "Curcuma longa", category: "Oleoresins", overview: "Premium turmeric oleoresin.",
-    image: "https://images.unsplash.com/photo-1615486171448-4fd133f92e59?w=400&q=80",
+    image: "/images/products/Turmeric Oleoresin/1.png",
+    thumbnail: "/images/products/Turmeric Oleoresin/2.png",
     benefits: ["Rich in curcumin", "Anti-inflammatory"], applications: ["Food coloring"], specifications: "10% - 95%", extractionMethod: "Solvent extraction", packaging: "25kg Drums", storage: "Cool, dark place", shelfLife: "24 months"
   },
   {
