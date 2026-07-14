@@ -114,14 +114,14 @@ export default function ProductDetails() {
                     onClick={() => setMainImage(thumb)}
                     className={`w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-xl overflow-hidden border-2 transition-all ${mainImage === thumb ? 'border-brand-primaryGreen shadow-md' : 'border-transparent opacity-60 hover:opacity-100'}`}
                   >
-                    <img src={thumb} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
+                    <img src={thumb} alt={`Thumbnail ${idx}`} className="w-full h-full object-contain bg-white p-1" />
                   </button>
                 ))}
               </div>
               
               {/* Main Image */}
               <div className="flex-grow rounded-2xl overflow-hidden bg-gray-50 h-[300px] sm:h-[450px]">
-                <img src={mainImage} alt={product.name} className="w-full h-full object-cover" />
+                <img src={mainImage} alt={product.name} className="w-full h-full object-contain p-2" />
               </div>
             </div>
 
@@ -423,7 +423,7 @@ export default function ProductDetails() {
                 </div>
                 
                 <div className="w-full sm:w-32 lg:w-full xl:w-32 flex-shrink-0 flex items-center justify-center">
-                  <img src={product.image} alt={product.name} className="w-full object-cover rounded-xl shadow-md border border-gray-100" />
+                  <img src={product.image} alt={product.name} className="w-full object-contain rounded-xl shadow-md border border-gray-100 bg-white" />
                 </div>
               </div>
             </div>

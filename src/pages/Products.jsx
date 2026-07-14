@@ -263,7 +263,7 @@ export default function Products() {
                       <ScrollReveal key={product.id} variant="zoomInSlight" delay={idx * 0.05}>
                         <Link to={`/products/${product.id}`} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow cursor-pointer flex flex-col group">
                           <div className="aspect-square bg-[#f5f8f5] rounded-xl mb-3 overflow-hidden">
-                            <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                            <img src={product.image} alt={product.name} className="w-full h-full object-contain bg-white p-2 group-hover:scale-105 transition-transform duration-300" />
                           </div>
                           <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight">{product.name} <br/>Oleoresin</h4>
                           <div className="mt-auto pt-3 flex justify-end">
@@ -290,7 +290,7 @@ export default function Products() {
                       <ScrollReveal key={product.id} variant="zoomInSlight" delay={idx * 0.05}>
                         <Link to={`/products/${product.id}`} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow cursor-pointer flex flex-col group">
                           <div className="aspect-square bg-[#fcf8f0] rounded-xl mb-3 overflow-hidden">
-                            <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                            <img src={product.image} alt={product.name} className="w-full h-full object-contain bg-white p-2 group-hover:scale-105 transition-transform duration-300" />
                           </div>
                           <h4 className="font-bold text-[#0d4f26] text-[13px] leading-tight">{product.name} <br/>Powder</h4>
                           <div className="mt-auto pt-3 flex justify-end">
@@ -314,7 +314,7 @@ export default function Products() {
                     {wholeSpices.map(product => (
                       <Link to={`/products/${product.id}`} key={product.id} className="flex flex-col items-center cursor-pointer group w-20">
                         <div className="w-16 h-16 rounded-full shadow-sm mb-3 overflow-hidden border-2 border-transparent group-hover:border-[#c1a755] transition-colors">
-                          <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                          <img src={product.image} alt={product.name} className="w-full h-full object-contain bg-white p-1" />
                         </div>
                         <h4 className="font-bold text-[#0d4f26] text-[11px] text-center leading-tight">
                           {product.name}
