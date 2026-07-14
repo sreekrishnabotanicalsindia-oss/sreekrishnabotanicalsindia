@@ -11,6 +11,19 @@ import {
 } from 'lucide-react';
 import { products } from '../data/products';
 
+const RealisticDrop = ({ size = 16, className = "" }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path d="M12 2.5c0 0-8 7.938-8 13.5 0 4.418 3.582 8 8 8s8-3.582 8-8c0-5.562-8-13.5-8-13.5z" />
+  </svg>
+);
+
 export default function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -137,7 +150,7 @@ export default function ProductDetails() {
               
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
-                <Droplet className="text-brand-gold fill-brand-gold" size={16} />
+                <RealisticDrop className="text-brand-gold" size={16} />
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
               </div>
 
@@ -149,7 +162,7 @@ export default function ProductDetails() {
               <div className="grid grid-cols-4 gap-2 text-center mb-8">
                 <div className="flex flex-col items-center">
                   <div className="w-10 h-10 rounded-full border border-green-200 flex items-center justify-center text-brand-primaryGreen mb-2">
-                    <Droplet size={18} />
+                    <RealisticDrop size={18} />
                   </div>
                   <span className="text-[10px] font-bold text-gray-700 leading-tight">High Content</span>
                 </div>
