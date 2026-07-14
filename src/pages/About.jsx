@@ -56,7 +56,7 @@ export default function About() {
           <div className="bg-[#0a4a22] rounded-3xl p-10 flex flex-col items-center">
             <h3 className="text-[#c1a755] text-sm font-bold tracking-widest uppercase mb-10 text-center">Sree Krishna Botanicals In Numbers</h3>
 
-            <ScrollReveal className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 w-full">
+            <ScrollReveal className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
               {/* Stat 3 */}
               <div className="flex flex-col items-center text-center group border-r border-[#1a6635] last:border-0 border-transparent lg:border-[#1a6635]">
                 <Package className="text-[#c1a755] mb-4" size={40} strokeWidth={1.5} />
@@ -71,12 +71,7 @@ export default function About() {
                 <span className="text-gray-300 text-sm font-medium">Farmers Network</span>
               </div>
 
-              {/* Stat 5 */}
-              <div className="flex flex-col items-center text-center group border-r border-[#1a6635] last:border-0 border-transparent lg:border-[#1a6635]">
-                <Award className="text-[#c1a755] mb-4" size={40} strokeWidth={1.5} />
-                <span className="text-white font-bold text-3xl mb-1">15+</span>
-                <span className="text-gray-300 text-sm font-medium">Years of Experience</span>
-              </div>
+             
 
               {/* Stat 6 */}
               <div className="flex flex-col items-center text-center group border-r-0">
