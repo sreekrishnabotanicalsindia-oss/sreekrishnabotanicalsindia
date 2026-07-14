@@ -2,14 +2,14 @@ export const products = [
   // Oleoresins
   {
     id: "o1", name: "Turmeric", botanicalName: "Curcuma longa", category: "Oleoresins", overview: "Premium turmeric oleoresin.",
-    image: "/images/products/Turmeric Oleoresin/1.png",
-    thumbnail: "/images/products/Turmeric Oleoresin/2.png",
+    image: "/images/products/Oleoresins/Turmeric Oleoresin/1.png",
+    thumbnail: "/images/products/Oleoresins/Turmeric Oleoresin/2.png",
     benefits: ["Rich in curcumin", "Anti-inflammatory"], applications: ["Food coloring"], specifications: "10% - 95%", extractionMethod: "Solvent extraction", packaging: "25kg Drums", storage: "Cool, dark place", shelfLife: "24 months"
   },
   {
     id: "o2", name: "Capsicum", botanicalName: "Capsicum annuum", category: "Oleoresins", overview: "Highly concentrated capsicum extract.",
-    image: "/images/products/Capsicum Oleoresin/1.png",
-    thumbnail: "/images/products/Capsicum Oleoresin/2.png",
+    image: "/images/products/Oleoresins/Capsicum Oleoresin/1.png",
+    thumbnail: "/images/products/Oleoresins/Capsicum Oleoresin/2.png",
     benefits: ["Standardized pungency"], applications: ["Spicy foods"], specifications: "1M - 6M SHU", extractionMethod: "Solvent extraction", packaging: "20kg / 25kg Drums", storage: "Cool, dry place", shelfLife: "24 months"
   },
   { id: "o3", name: "Black Pepper", botanicalName: "Piper nigrum", category: "Oleoresins", image: "https://images.unsplash.com/photo-1596541584288-467262ba99a8?w=400&q=80", overview: "Rich, pungent black pepper extract.", benefits: ["Strong aroma", "Digestive aid"], applications: ["Seasonings", "Meat packing"], specifications: "Piperine: 20-40%", extractionMethod: "Solvent extraction", packaging: "25kg Drums", storage: "Cool, dry place", shelfLife: "24 months" },
