@@ -3,19 +3,19 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../components/ScrollReveal';
-import { 
-  ChevronRight, Leaf, Award, Globe, ShieldCheck, 
-  Droplet, CheckCircle2, User, Mail, Building, 
-  Phone, Send, Download, FileText, Package, 
-  Box, Clock, Sprout, Truck, Sparkles 
+import {
+  ChevronRight, Leaf, Award, Globe, ShieldCheck,
+  Droplet, CheckCircle2, User, Mail, Building,
+  Phone, Send, Download, FileText, Package,
+  Box, Clock, Sprout, Truck, Sparkles
 } from 'lucide-react';
 import { products } from '../data/products';
 
 const RealisticDrop = ({ size = 16, className = "" }) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -76,7 +76,7 @@ export default function ProductDetails() {
 
       {/* Main Container */}
       <div className="min-h-screen bg-[#fcfcfa] pt-0 pb-20">
-        
+
         {/* Top Badge Bar */}
         <div className="bg-[#f5f8f5] border-y border-green-100">
           <div className="container mx-auto px-4 lg:px-8 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -95,34 +95,34 @@ export default function ProductDetails() {
             <div className="flex items-center gap-6 text-sm font-bold text-brand-darkGreen">
               <div className="flex items-center gap-2">
                 <Leaf className="text-brand-primaryGreen" size={18} />
-                <span>100%<br/><span className="font-normal text-xs">Natural</span></span>
+                <span>100%<br /><span className="font-normal text-xs">Natural</span></span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="text-brand-primaryGreen" size={18} />
-                <span>Premium<br/><span className="font-normal text-xs">Quality</span></span>
+                <span>Premium<br /><span className="font-normal text-xs">Quality</span></span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="text-brand-primaryGreen" size={18} />
-                <span>Export<br/><span className="font-normal text-xs">Worldwide</span></span>
+                <span>Export<br /><span className="font-normal text-xs">Worldwide</span></span>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="text-brand-primaryGreen" size={18} />
-                <span>ISO<br/><span className="font-normal text-xs">Certified</span></span>
+                <span>ISO<br /><span className="font-normal text-xs">Certified</span></span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 py-10">
-          
+
           <ScrollReveal variant="fadeUp" className="flex flex-col lg:flex-row gap-10 bg-white p-6 md:p-10 rounded-[30px] shadow-sm border border-gray-100">
-            
+
             {/* Left Column: Image Gallery */}
             <div className="w-full lg:w-[45%] flex flex-col sm:flex-row gap-4">
               {/* Thumbnails */}
               <div className="flex flex-row sm:flex-col gap-3 overflow-x-auto sm:overflow-visible">
                 {thumbnails.map((thumb, idx) => (
-                  <button 
+                  <button
                     key={idx}
                     onClick={() => setMainImage(thumb)}
                     className={`w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-xl overflow-hidden border-2 transition-all ${mainImage === thumb ? 'border-brand-primaryGreen shadow-md' : 'border-transparent opacity-60 hover:opacity-100'}`}
@@ -131,7 +131,7 @@ export default function ProductDetails() {
                   </button>
                 ))}
               </div>
-              
+
               {/* Main Image */}
               <div className="flex-grow rounded-2xl overflow-hidden bg-gray-50 h-[300px] sm:h-[450px]">
                 <img src={mainImage} alt={product.name} className="w-full h-full object-contain p-2" />
@@ -143,14 +143,14 @@ export default function ProductDetails() {
               <div className="inline-block bg-green-50 text-brand-darkGreen text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full w-max mb-4">
                 {product.category}
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-brand-darkGreen mb-4">
                 {product.name} {product.category === 'Oleoresins' ? 'Oleoresin' : product.category === 'Powders' ? 'Powder' : ''}
               </h1>
-              
+
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
-                <RealisticDrop className="text-brand-lightGold drop-shadow-[0_0_4px_rgba(245,216,122,0.6)]" size={18} />
+                <RealisticDrop className="text-[#FFD700] drop-shadow-[0_0_8px_rgba(255,215,0,1)]" size={20} />
                 <div className="h-px bg-brand-primaryGreen flex-grow"></div>
               </div>
 
@@ -221,7 +221,7 @@ export default function ProductDetails() {
                 <h3 className="text-xl font-bold text-brand-darkGreen mb-6 border-b border-gray-200 pb-4">
                   Request a Quote
                 </h3>
-                
+
                 <form className="flex-grow flex flex-col gap-4 text-sm" onSubmit={(e) => e.preventDefault()}>
                   <div className="relative">
                     <input type="text" placeholder="Your Name *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
@@ -239,7 +239,7 @@ export default function ProductDetails() {
                     <input type="tel" placeholder="Phone / WhatsApp *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
                     <Phone className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                   </div>
-                  
+
                   <div className="relative">
                     <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen appearance-none text-gray-500" required defaultValue="">
                       <option value="" disabled>Quantity Required *</option>
@@ -268,7 +268,7 @@ export default function ProductDetails() {
 
           {/* Bottom Section: Tabs & At a Glance */}
           <ScrollReveal variant="fadeUp" delay={0.1} className="mt-8 flex flex-col lg:flex-row gap-8">
-            
+
             {/* Tabs Area */}
             <div className="w-full lg:w-2/3 bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="flex border-b border-gray-100 overflow-x-auto custom-scrollbar">
@@ -282,7 +282,7 @@ export default function ProductDetails() {
                   </button>
                 ))}
               </div>
-              
+
               <div className="p-8 flex flex-col md:flex-row gap-8">
                 {activeTab === 'Overview' && (
                   <>
@@ -291,7 +291,7 @@ export default function ProductDetails() {
                       <p className="text-gray-600 text-sm leading-relaxed mb-6">
                         {product.overview} It contains bioactive compounds responsible for its color, flavor and health benefits, extracted using advanced technology to ensure maximum potency and purity.
                       </p>
-                      
+
                       <h4 className="text-lg font-bold text-brand-darkGreen mb-3">Key Benefits</h4>
                       <ul className="space-y-3">
                         {product.benefits && product.benefits.map((benefit, idx) => (
@@ -410,7 +410,7 @@ export default function ProductDetails() {
             {/* Product At A Glance */}
             <div className="w-full lg:w-1/3 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 flex flex-col">
               <h4 className="text-xl font-bold text-brand-darkGreen mb-6">Product At A Glance</h4>
-              
+
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
                 <div className="flex-1 space-y-4 text-sm">
                   <div>
@@ -434,7 +434,7 @@ export default function ProductDetails() {
                     <p className="text-gray-600">{product.color || 'Characteristic'}</p>
                   </div>
                 </div>
-                
+
                 <div className="w-full sm:w-32 lg:w-full xl:w-32 flex-shrink-0 flex items-center justify-center">
                   <img src={product.image} alt={product.name} className="w-full object-contain rounded-xl shadow-md border border-gray-100 bg-white" />
                 </div>
