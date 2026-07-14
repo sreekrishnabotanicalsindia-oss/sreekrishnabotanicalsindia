@@ -8,7 +8,8 @@ export const products = [
   },
   {
     id: "o2", name: "Capsicum", botanicalName: "Capsicum annuum", category: "Oleoresins", overview: "Highly concentrated capsicum extract.",
-    image: "https://images.unsplash.com/photo-1596649280629-8736a58bf376?w=400&q=80",
+    image: "/images/products/Capsicum Oleoresin/1.png",
+    thumbnail: "/images/products/Capsicum Oleoresin/2.png",
     benefits: ["Standardized pungency"], applications: ["Spicy foods"], specifications: "1M - 6M SHU", extractionMethod: "Solvent extraction", packaging: "20kg / 25kg Drums", storage: "Cool, dry place", shelfLife: "24 months"
   },
   { id: "o3", name: "Black Pepper", botanicalName: "Piper nigrum", category: "Oleoresins", image: "https://images.unsplash.com/photo-1596541584288-467262ba99a8?w=400&q=80", overview: "Rich, pungent black pepper extract.", benefits: ["Strong aroma", "Digestive aid"], applications: ["Seasonings", "Meat packing"], specifications: "Piperine: 20-40%", extractionMethod: "Solvent extraction", packaging: "25kg Drums", storage: "Cool, dry place", shelfLife: "24 months" },
