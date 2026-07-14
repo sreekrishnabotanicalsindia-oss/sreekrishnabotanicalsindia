@@ -8,6 +8,8 @@ import aboutQualityImg from '../assets/about_quality_scientist.png';
 import aboutExtractionImg from '../assets/about_extraction_equip.png';
 import aboutWarehouseImg from '../assets/about_warehouse.png';
 import aboutSustainabilityImg from '../assets/about -Sustainability.png';
+import MissionVisionValues from '../components/MissionVisionValues';
+import WhoWeAre from '../components/WhoWeAre';
 
 export default function About() {
   return (
@@ -43,168 +45,10 @@ export default function About() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="pt-8 pb-24 md:pt-16 md:pb-24 bg-white relative overflow-hidden">
-        {/* Leaf decorations removed */}
-
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-
-            {/* Left Content */}
-            <div className="w-full lg:w-5/12 flex flex-col items-start pt-4">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-4 mb-6"
-              >
-                <span className="text-[#0d4f26] font-bold tracking-widest text-sm uppercase">WHO WE ARE</span>
-                <div className="w-16 h-px bg-[#c1a755]"></div>
-              </motion.div>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading text-[#0d4f26] font-bold leading-tight mb-8"
-              >
-                A Passion for Purity.<br />A Commitment to Excellence.
-              </motion.h2>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-gray-700 space-y-6 text-base md:text-lg leading-relaxed"
-              >
-                <p>
-                  <strong className="text-gray-900">Sree Krishna Botanicals</strong> is a forward-looking agribusiness dedicated to manufacturing premium-quality oleoresins, powders and spices. We combine nature, science and innovation to produce high-value botanical extracts that serve a wide range of industries across the globe.
-                </p>
-                <p>
-                  From carefully sourcing the finest raw materials to using advanced extraction technology and stringent quality control, we ensure the highest standards of purity, consistency and traceability in every batch.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="mt-12 flex items-center gap-4"
-              >
-                <div className="w-12 h-px bg-[#c1a755]"></div>
-                <span className="font-subheading italic text-3xl text-[#2a5934]">Sree Krishna Botanicals</span>
-              </motion.div>
-            </div>
-
-            {/* Right Content - Images */}
-            <div className="w-full lg:w-7/12">
-              <div className="flex flex-col gap-4">
-                {/* Large top image - Factory */}
-                <motion.img
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=1200&auto=format&fit=crop"
-                  alt="Sree Krishna Botanicals Facility"
-                  className="w-full h-[300px] md:h-[400px] object-cover rounded-3xl shadow-lg border border-gray-100"
-                />
-
-                {/* 3 Small images */}
-                <div className="grid grid-cols-3 gap-4">
-                  <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    src={aboutQualityImg}
-                    alt="Quality Control Scientist"
-                    className="w-full h-24 md:h-32 lg:h-48 object-cover rounded-2xl shadow-sm border border-gray-100"
-                  />
-                  <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    src={aboutExtractionImg}
-                    alt="Extraction Equipment"
-                    className="w-full h-24 md:h-32 lg:h-48 object-cover rounded-2xl shadow-sm border border-gray-100"
-                  />
-                  <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    src={aboutWarehouseImg}
-                    alt="Inventory Inspector"
-                    className="w-full h-24 md:h-32 lg:h-48 object-cover rounded-2xl shadow-sm border border-gray-100"
-                  />
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <WhoWeAre />
 
       {/* Mission / Vision / Values Section */}
-      <section className="py-12 bg-[#f9f9f9]">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-[#fcfcfa] rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative overflow-hidden">
-            {/* Background leaf image on the right */}
-            <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-1/4 translate-y-1/4">
-              <Leaf size={300} className="text-[#0d4f26]" />
-            </div>
-
-            {/* Mission */}
-            <ScrollReveal variant="fadeUp" delay={0} className="flex flex-col md:flex-row gap-4 lg:border-r border-gray-200 pr-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-[#0d4f26] flex items-center justify-center">
-                  <Target className="text-[#c1a755]" size={32} />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-[#0d4f26] font-bold text-lg mb-3 uppercase">Our Mission</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  To deliver nature's finest botanical extracts with uncompromising quality, purity and value, while creating long-term partnerships across global markets.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Vision */}
-            <ScrollReveal variant="fadeUp" delay={0.1} className="flex flex-col md:flex-row gap-4 lg:border-r border-gray-200 pr-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-[#0d4f26] flex items-center justify-center">
-                  <Eye className="text-[#c1a755]" size={32} />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-[#0d4f26] font-bold text-lg mb-3 uppercase">Our Vision</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  To become a trusted global leader in natural extracts and spice ingredients, recognized for our innovation, integrity and commitment to a sustainable future.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Values */}
-            <ScrollReveal variant="fadeUp" delay={0.2} className="flex flex-col md:flex-row gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-[#0d4f26] flex items-center justify-center">
-                  <Diamond className="text-[#c1a755]" size={32} />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-[#0d4f26] font-bold text-lg mb-3 uppercase">Our Values</h3>
-                <ul className="text-gray-700 text-sm space-y-2 list-disc list-inside font-medium">
-                  <li>Integrity & Transparency</li>
-                  <li>Quality First</li>
-                  <li>Innovation</li>
-                  <li>Sustainability</li>
-                  <li>Customer Success</li>
-                </ul>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      <MissionVisionValues />
 
       {/* Sree Krishna Botanicals in Numbers */}
       <section className="py-8 bg-[#f9f9f9]">
