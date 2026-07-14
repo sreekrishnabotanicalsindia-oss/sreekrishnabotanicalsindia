@@ -19,12 +19,6 @@ import {
   ShieldCheck,
   Microscope,
   Sparkles,
-  Wind,
-  Beaker,
-  Droplets,
-  TestTube,
-  Package,
-  Plane,
   Utensils,
   Pill,
   HeartPulse,
@@ -417,63 +411,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Process Section */}
-      <section className="py-8 bg-[#fcfdfa] px-4 md:px-8 lg:px-12">
-        <div className="container mx-auto">
-          <div className="relative rounded-[32px] overflow-hidden bg-[#063318] p-6 md:p-8 lg:p-10 shadow-2xl">
-            {/* Background Texture/Leaves */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <img
-                src="https://images.unsplash.com/photo-1618683162772-7634f19b26e9?q=80&w=1200&auto=format&fit=crop"
-                alt="Leaves Texture"
-                className="w-full h-full object-cover"
-              />
-            </div>
 
-            <ScrollReveal className="relative z-10 text-center mb-8">
-              <span className="text-[#c1a755] text-xs font-bold tracking-[0.2em] uppercase mb-1 block">OUR PROCESS</span>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white">
-                Advanced Extraction Process
-              </h2>
-            </ScrollReveal>
-
-            {/* Timeline */}
-            <div className="relative z-10 flex overflow-x-auto flex-nowrap md:flex-row md:flex-wrap justify-start md:justify-between items-start md:items-center gap-8 md:gap-0 w-full px-2 lg:px-6 mx-auto mb-10 pb-4 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {/* Desktop Connecting Line */}
-              <div className="hidden md:block absolute top-10 left-14 right-14 h-[2px] border-t-2 border-dashed border-[#c1a755]/50"></div>
-
-              {[
-                { icon: Sprout, label: "Raw Material\nSelection" },
-                { icon: Sparkles, label: "Cleaning &\nSorting" },
-                { icon: Wind, label: "Drying &\nGrinding" },
-                { icon: Beaker, label: "Extraction" },
-                { icon: Droplets, label: "Filtration &\nPurification" },
-                { icon: TestTube, label: "Quality\nTesting" },
-                { icon: Package, label: "Packing" },
-                { icon: Plane, label: "Export" }
-              ].map((step, idx) => (
-                <div key={idx} className="flex flex-col items-center relative group w-28 shrink-0 snap-start">
-                  <div className="w-20 h-20 rounded-full border-2 border-[#c1a755] bg-[#0b3c1d] flex items-center justify-center mb-3 text-[#c1a755] group-hover:bg-[#c1a755] group-hover:text-[#063318] transition-colors duration-300 relative z-10 shadow-lg">
-                    <step.icon size={32} strokeWidth={1.2} />
-                  </div>
-                  <span className="text-white text-[10px] md:text-xs font-semibold text-center whitespace-pre-line leading-tight">
-                    {step.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="relative z-10 flex justify-center">
-              <Link
-                to="/extraction-process"
-                className="bg-[#c1a755] text-[#063318] px-8 py-3 rounded-md text-xs font-bold tracking-wide flex items-center gap-3 hover:bg-[#e6c65c] transition-colors shadow-md"
-              >
-                VIEW DETAILED PROCESS <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Industries We Serve Section */}
       <section className="py-12 md:py-16 bg-white">
