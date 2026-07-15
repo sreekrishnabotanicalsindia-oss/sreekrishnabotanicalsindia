@@ -310,16 +310,29 @@ export default function Products() {
                     <h2 className="text-2xl font-bold text-[#0d4f26]">Whole Spices</h2>
                   </div>
                   
-                  <div className="flex flex-wrap justify-start gap-x-6 gap-y-8">
-                    {wholeSpices.map(product => (
-                      <Link to={`/products/${product.id}`} key={product.id} className="flex flex-col items-center cursor-pointer group w-20">
-                        <div className="w-16 h-16 rounded-full shadow-sm mb-3 overflow-hidden border-2 border-transparent group-hover:border-[#c1a755] transition-colors">
-                          <img src={product.image} alt={product.name} className="w-full h-full object-contain bg-white p-1" />
-                        </div>
-                        <h4 className="font-bold text-[#0d4f26] text-[11px] text-center leading-tight">
-                          {product.name}
-                        </h4>
-                      </Link>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 justify-items-center">
+                    {wholeSpices.map((product, idx) => (
+                      <ScrollReveal key={product.id} variant="zoomInSlight" delay={idx * 0.05} className="w-full">
+                        <Link to={`/products/${product.id}`} className="flex flex-col items-center cursor-pointer group">
+                          
+                          <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full flex items-center justify-center mb-4 mx-auto group">
+                            {/* Animated spinning border */}
+                            <div className="absolute inset-0 rounded-full border-[3px] border-transparent group-hover:border-t-[#c1a755] group-hover:border-r-[#c1a755] group-hover:border-b-[#c1a755] group-hover:animate-[spin_1.5s_linear_infinite] transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+                            
+                            {/* Inner Ring to create a track for the spinner */}
+                            <div className="absolute inset-1 rounded-full border border-gray-100 group-hover:border-transparent transition-colors"></div>
+                            
+                            {/* Image container */}
+                            <div className="relative w-[calc(100%-12px)] h-[calc(100%-12px)] rounded-full overflow-hidden bg-white shadow-sm border border-gray-50 group-hover:shadow-lg transition-shadow">
+                              <img src={product.image} alt={product.name} className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
+                            </div>
+                          </div>
+                          
+                          <h4 className="font-bold text-[#0d4f26] text-[15px] lg:text-[17px] text-center leading-tight">
+                            {product.name}
+                          </h4>
+                        </Link>
+                      </ScrollReveal>
                     ))}
                   </div>
                 </div>
