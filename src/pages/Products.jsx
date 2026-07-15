@@ -323,8 +323,8 @@ export default function Products() {
                             <div className="absolute inset-1 rounded-full border border-gray-100 group-hover:border-transparent transition-colors"></div>
                             
                             {/* Image container */}
-                            <div className="relative w-[calc(100%-12px)] h-[calc(100%-12px)] rounded-full overflow-hidden bg-white shadow-sm border border-gray-50 group-hover:shadow-lg transition-shadow flex items-center justify-center">
-                              <img src={product.image} alt={product.name} className="w-[85%] h-[85%] object-contain group-hover:scale-110 transition-transform duration-500 rounded-lg" />
+                            <div className="relative w-[calc(100%-12px)] h-[calc(100%-12px)] rounded-full overflow-hidden bg-white shadow-sm border border-gray-50 group-hover:shadow-lg transition-shadow">
+                              <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             </div>
                           </div>
                           
