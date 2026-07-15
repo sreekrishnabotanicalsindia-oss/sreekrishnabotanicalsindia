@@ -54,7 +54,7 @@ export default function ProductDetails() {
   }
 
   // Generate thumbnails based on the main image and optional thumbnail
-  const thumbnails = [
+  const thumbnails = product.images || [
     product.image,
     product.thumbnail || product.image + '&auto=format&fit=crop&w=400&q=60'
   ];
