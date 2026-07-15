@@ -211,25 +211,25 @@ export default function Products() {
               <div className="flex flex-wrap gap-2 w-full sm:w-auto p-1">
                 <button 
                   onClick={() => setActiveCategory('All')}
-                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-semibold transition-colors ${activeCategory === 'All' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-[16px] font-heading font-semibold transition-colors ${activeCategory === 'All' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
                 >
                   <Leaf size={16} /> All Products
                 </button>
                 <button 
                   onClick={() => setActiveCategory('Oleoresins')}
-                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-semibold transition-colors ${activeCategory === 'Oleoresins' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-[16px] font-heading font-semibold transition-colors ${activeCategory === 'Oleoresins' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
                 >
                   <Droplet size={16} /> Oleoresins
                 </button>
                 <button 
                   onClick={() => setActiveCategory('Powders')}
-                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-semibold transition-colors ${activeCategory === 'Powders' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-[16px] font-heading font-semibold transition-colors ${activeCategory === 'Powders' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
                 >
                   <Package size={16} /> Powders
                 </button>
                 <button 
                   onClick={() => setActiveCategory('Whole Spices')}
-                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-semibold transition-colors ${activeCategory === 'Whole Spices' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                  className={`px-4 py-2 rounded-xl flex items-center gap-2 text-[16px] font-heading font-semibold transition-colors ${activeCategory === 'Whole Spices' ? 'bg-[#0a4a22] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
                 >
                   <Leaf size={16} /> Whole Spices
                 </button>
