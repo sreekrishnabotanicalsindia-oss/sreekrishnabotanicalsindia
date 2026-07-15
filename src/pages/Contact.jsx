@@ -1,16 +1,43 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Globe, Send, ShieldCheck, Clock, Headset, Award, HeartHandshake, FlaskConical } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import contactHeroImg from '../assets/contact us hero.png';
 import leavesDecorImg from '../assets/ChatGPT Image Jul 11, 2026, 06_35_18 PM.png';
 
 export default function Contact() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const onSubmit = (data) => {
-    console.log(data);
-    alert('Thank you for contacting us! We will get back to you shortly.');
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        {
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone || 'Not provided',
+          subject: data.subject || 'General Inquiry',
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
+      );
+      setSubmitStatus('success');
+      reset();
+      setTimeout(() => setSubmitStatus(null), 5000);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -202,15 +229,29 @@ export default function Contact() {
                     {errors.message && <span className="text-red-500 text-[10px] mt-1 absolute -bottom-4 left-0">Required</span>}
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button & Status */}
                 <div>
                   <button 
                     type="submit" 
-                    className="flex items-center gap-2 bg-[#0d4f26] hover:bg-[#156a31] text-white px-8 py-3.5 rounded-lg font-bold text-sm transition-colors"
+                    disabled={isSubmitting}
+                    className={`flex items-center gap-2 text-white px-8 py-3.5 rounded-lg font-bold text-sm transition-colors ${
+                      isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#0d4f26] hover:bg-[#156a31]'
+                    }`}
                   >
-                    Send Message
-                    <Send size={16} />
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {!isSubmitting && <Send size={16} />}
                   </button>
+                  
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-3 bg-green-50 text-green-700 text-sm rounded-lg border border-green-200">
+                      Thank you for contacting us! We will get back to you shortly.
+                    </div>
+                  )}
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-3 bg-red-50 text-red-700 text-sm rounded-lg border border-red-200">
+                      Oops! Something went wrong. Please try again later or email us directly.
+                    </div>
+                  )}
                 </div>
                 
                 {/* Privacy text */}
