@@ -29,6 +29,42 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null);
   const [activeTab, setActiveTab] = useState('Overview');
   const [mainImage, setMainImage] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', phone: '', quantity: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleInputChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleQuoteSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          subject: `Quote Request for ${product.name}`,
+          message: `Quantity Required: ${formData.quantity}\n\nAdditional Message:\n${formData.message}`
+        })
+      });
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', company: '', phone: '', quantity: '', message: '' });
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     // Scroll to top on mount
@@ -222,26 +258,26 @@ export default function ProductDetails() {
                   Request a Quote
                 </h3>
 
-                <form className="flex-grow flex flex-col gap-4 text-sm" onSubmit={(e) => e.preventDefault()}>
+                <form className="flex-grow flex flex-col gap-4 text-sm" onSubmit={handleQuoteSubmit}>
                   <div className="relative">
-                    <input type="text" placeholder="Your Name *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
+                    <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
                     <User className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                   </div>
                   <div className="relative">
-                    <input type="email" placeholder="Email Address *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
+                    <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email Address *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
                     <Mail className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                   </div>
                   <div className="relative">
-                    <input type="text" placeholder="Company Name *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
+                    <input type="text" name="company" value={formData.company} onChange={handleInputChange} placeholder="Company Name *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
                     <Building className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                   </div>
                   <div className="relative">
-                    <input type="tel" placeholder="Phone / WhatsApp *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Phone / WhatsApp *" className="w-full pl-4 pr-10 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen" required />
                     <Phone className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                   </div>
 
                   <div className="relative">
-                    <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen appearance-none text-gray-500" required defaultValue="">
+                    <select name="quantity" value={formData.quantity} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen appearance-none text-gray-500" required>
                       <option value="" disabled>Quantity Required *</option>
                       <option value="1-50kg">1 - 50 kg</option>
                       <option value="50-200kg">50 - 200 kg</option>
@@ -251,13 +287,16 @@ export default function ProductDetails() {
                   </div>
 
                   <div className="relative flex-grow">
-                    <textarea placeholder="Your Message" className="w-full h-24 p-4 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen resize-none"></textarea>
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Your Message" className="w-full h-24 p-4 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primaryGreen resize-none"></textarea>
                   </div>
 
-                  <button className="w-full bg-[#0a4a22] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-[#0d5c2a] transition-colors mt-2">
-                    <Send size={16} /> Send Inquiry
+                  {submitStatus === 'success' && <p className="text-green-600 text-sm font-semibold">Enquiry sent successfully!</p>}
+                  {submitStatus === 'error' && <p className="text-red-500 text-sm font-semibold">Error sending enquiry.</p>}
+
+                  <button disabled={isSubmitting} className="w-full bg-[#0a4a22] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-[#0d5c2a] transition-colors mt-2 disabled:opacity-50">
+                    <Send size={16} /> {isSubmitting ? 'Sending...' : 'Send Inquiry'}
                   </button>
-                  <button className="w-full bg-[#e8efe9] text-brand-darkGreen py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-[#d8e6da] transition-colors mt-2">
+                  <button type="button" className="w-full bg-[#e8efe9] text-brand-darkGreen py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-[#d8e6da] transition-colors mt-2">
                     <Download size={16} /> Download Product Datasheet
                   </button>
                 </form>

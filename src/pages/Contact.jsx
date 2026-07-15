@@ -17,23 +17,26 @@ export default function Contact() {
     setSubmitStatus(null);
     
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
-        {
-          from_name: data.name,
-          from_email: data.email,
-          phone: data.phone || 'Not provided',
-          subject: data.subject || 'General Inquiry',
-          message: data.message,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
-      );
-      setSubmitStatus('success');
-      reset();
-      setTimeout(() => setSubmitStatus(null), 5000);
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        reset();
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        console.error('Server Error:', result.message);
+        setSubmitStatus('error');
+      }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Network Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
