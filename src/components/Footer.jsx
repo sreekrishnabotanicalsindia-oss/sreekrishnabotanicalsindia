@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Globe, ArrowRight, Headset, ShieldCheck, Leaf, Award, Handshake, FlaskConical, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import ctaLeftImg from '../assets/ChatGPT Image Jul 11, 2026, 06_32_35 PM.png';
 import ctaRightImg from '../assets/ChatGPT Image Jul 11, 2026, 06_35_18 PM.png';
 import logo from '../assets/logo.png';
@@ -77,10 +78,8 @@ export default function Footer() {
               </p>
               
               <div className="flex gap-4 mt-2">
-                <a href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#0b2816] transition-colors"><FaFacebookF size={14} /></a>
-                <a href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#0b2816] transition-colors"><FaLinkedinIn size={14} /></a>
-                <a href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#0b2816] transition-colors"><FaInstagram size={14} /></a>
-                <a href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#0b2816] transition-colors"><FaYoutube size={14} /></a>
+                <a href="https://www.facebook.com/profile.php?id=61591237215339" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#0b2816] transition-colors"><FaFacebookF size={14} /></a>
+                <a href="https://x.com/SreeKrishna_Ind" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#0b2816] transition-colors"><FaXTwitter size={14} /></a>
               </div>
             </div>
 
