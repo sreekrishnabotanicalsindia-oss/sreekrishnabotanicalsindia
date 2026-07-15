@@ -77,7 +77,7 @@ export default function Navbar() {
                 <div key={link.name} className="relative group">
                   <Link
                     to={link.path}
-                    className={`relative py-1 flex items-center gap-1 text-[14px] font-button font-semibold tracking-wider uppercase transition-colors group/navlink ${isActive ? 'text-[#ffc72c]' : 'text-white hover:text-[#ffc72c]'
+                    className={`relative py-1 flex items-center gap-1 text-[16px] font-heading font-semibold tracking-wider uppercase transition-colors group/navlink ${isActive ? 'text-[#ffc72c]' : 'text-white hover:text-[#ffc72c]'
                       }`}
                   >
                     {link.name}
