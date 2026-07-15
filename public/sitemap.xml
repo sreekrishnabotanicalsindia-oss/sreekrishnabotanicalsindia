@@ -1,119 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- About Us -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/about</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/about</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Products -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Product Details - Turmeric Oleoresin -->
-  <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products/turmeric-oleoresin</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/products</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Product Details - Chilli Oleoresin -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products/chilli-oleoresin</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/extraction-process</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Product Details - Black Pepper Oleoresin -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products/black-pepper-oleoresin</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/quality</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Product Details - Ginger Oleoresin -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products/ginger-oleoresin</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/exports</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Product Details - Cardamom Oleoresin -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products/cardamom-oleoresin</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/certificates</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Product Details - Coriander Oleoresin -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/products/coriander-oleoresin</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/contact</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Extraction Process -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/extraction-process</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/products/o1</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Quality -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/quality</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/products/o2</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Global Exports -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/exports</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/products/o3</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Certificates -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/certificates</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/products/o4</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Contact Us -->
   <url>
-    <loc>https://sree-krishna-botanicals.vercel.app/contact</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://sreekrishnabotanicals.com/products/o5</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o6</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o7</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o8</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o9</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o10</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o11</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o12</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o13</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/o14</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p1</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p2</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p3</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p4</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p5</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p6</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p7</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p8</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p9</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p10</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p11</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p12</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/p13</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w1</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w2</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w3</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w4</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w5</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w6</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w7</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w8</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w9</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w10</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sreekrishnabotanicals.com/products/w11</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
