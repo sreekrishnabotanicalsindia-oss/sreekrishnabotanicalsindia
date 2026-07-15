@@ -324,7 +324,7 @@ export default function Products() {
                             
                             {/* Image container */}
                             <div className="relative w-[calc(100%-12px)] h-[calc(100%-12px)] rounded-full overflow-hidden bg-white shadow-sm border border-gray-50 group-hover:shadow-lg transition-shadow">
-                              <img src={product.image} alt={product.name} className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
+                              <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             </div>
                           </div>
                           
