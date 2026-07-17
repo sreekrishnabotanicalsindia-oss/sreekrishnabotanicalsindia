@@ -43,9 +43,9 @@ export default function Products() {
         <meta name="description" content="Explore our premium range of oleoresins and spice extracts – Turmeric, Chilli, Black Pepper, Ginger, Cardamom, Coriander. High purity, food-grade, pharma-grade botanical extracts from India." />
         <meta name="keywords" content="oleoresin products India, turmeric oleoresin, chilli oleoresin, black pepper oleoresin, ginger oleoresin, cardamom oleoresin, coriander oleoresin, spice extracts buy, food grade oleoresin, pharma grade oleoresin, buy botanical extracts India, natural spice oil India, curcumin extract supplier, capsaicin oleoresin, piperine extract supplier, spice extract manufacturer" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/products" />
+        <link rel="canonical" href="https://sreekrishnabotanicals.com/products" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/products" />
+        <meta property="og:url" content="https://sreekrishnabotanicals.com/products" />
         <meta property="og:title" content="Premium Oleoresin Products | Sree Krishna Botanicals" />
         <meta property="og:description" content="Premium range of oleoresins – Turmeric, Chilli, Black Pepper, Ginger, Cardamom, Coriander. High purity food-grade and pharma-grade botanical extracts from India." />
         <meta property="og:site_name" content="Sree Krishna Botanicals" />

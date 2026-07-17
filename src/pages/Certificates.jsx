@@ -21,9 +21,9 @@ export default function Certificates() {
         <meta name="description" content="Sree Krishna Botanicals holds ISO, FSSAI, HACCP, and GMP certifications ensuring the highest standards in botanical extract and oleoresin manufacturing. View our accreditations." />
         <meta name="keywords" content="oleoresin certifications India, ISO certified botanical extracts, FSSAI certified spice extract, HACCP certified manufacturer, GMP certified oleoresin, certified botanical extract India, food safety certification spice, quality certified natural extract, accredited botanical manufacturer" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/certificates" />
+        <link rel="canonical" href="https://sreekrishnabotanicals.com/certificates" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/certificates" />
+        <meta property="og:url" content="https://sreekrishnabotanicals.com/certificates" />
         <meta property="og:title" content="Certifications | Sree Krishna Botanicals" />
         <meta property="og:description" content="ISO, FSSAI, HACCP and GMP certified botanical extract manufacturer from India. View our quality accreditations." />
         <meta property="og:site_name" content="Sree Krishna Botanicals" />

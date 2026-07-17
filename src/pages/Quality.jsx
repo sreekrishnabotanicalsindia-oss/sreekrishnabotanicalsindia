@@ -39,9 +39,9 @@ export default function Quality() {
         <meta name="description" content="Sree Krishna Botanicals maintains the highest quality standards in oleoresin and botanical extract manufacturing. ISO certified, FSSAI compliant, HACCP protocols, and rigorous HPLC testing ensure purity and potency in every batch." />
         <meta name="keywords" content="oleoresin quality standards, ISO certified botanical extracts, FSSAI compliant spice extracts, HACCP oleoresin, HPLC testing botanical extracts, quality certified spice extract India, GMP certified manufacturer, food safety spice extracts, pharmaceutical grade extracts, quality assurance botanical" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/quality" />
+        <link rel="canonical" href="https://sreekrishnabotanicals.com/quality" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/quality" />
+        <meta property="og:url" content="https://sreekrishnabotanicals.com/quality" />
         <meta property="og:title" content="Quality Standards | Sree Krishna Botanicals" />
         <meta property="og:description" content="ISO certified, FSSAI compliant oleoresin manufacturer with HACCP protocols and rigorous HPLC testing for purity and potency." />
         <meta property="og:site_name" content="Sree Krishna Botanicals" />

@@ -19,9 +19,9 @@ export default function About() {
         <meta name="description" content="Learn about Sree Krishna Botanicals – a trusted manufacturer and exporter of premium oleoresins and botanical spice extracts from India. Committed to purity, quality, and sustainability." />
         <meta name="keywords" content="about Sree Krishna Botanicals, oleoresin manufacturer India, botanical extracts company India, spice extracts manufacturer Andhra Pradesh, natural extracts India, sustainable spice extraction, herbal extract company, oleoresin exporter, trusted botanical brand India" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/about" />
+        <link rel="canonical" href="https://sreekrishnabotanicals.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/about" />
+        <meta property="og:url" content="https://sreekrishnabotanicals.com/about" />
         <meta property="og:title" content="About Us | Sree Krishna Botanicals" />
         <meta property="og:description" content="Trusted manufacturer and exporter of premium oleoresins and botanical spice extracts from India. Committed to purity, quality, and sustainability." />
         <meta property="og:site_name" content="Sree Krishna Botanicals" />

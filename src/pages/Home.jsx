@@ -73,34 +73,34 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Sree Krishna Botanicals | Premium Oleoresins & Spice Extracts Manufacturer India</title>
-        <meta name="description" content="Sree Krishna Botanicals is a leading manufacturer and exporter of premium quality oleoresins, spice extracts, and botanical extracts from India. Trusted by global food, pharma, and cosmetic industries." />
-        <meta name="keywords" content="oleoresin manufacturer India, spice extracts exporter, turmeric oleoresin, chilli oleoresin, black pepper oleoresin, ginger oleoresin, cardamom oleoresin, botanical extracts India, natural spice extracts, food grade oleoresin, pharma grade extracts, cosmetic botanical extracts, Sree Krishna Botanicals, oleoresin supplier, spice oil India, curcumin extract, capsicum oleoresin, piperine extract, gingerol extract, natural food colouring, herbal extracts India" />
+        <title>Sree Krishna Botanicals | Essential Oils & Botanical Extracts Manufacturer India</title>
+        <meta name="description" content="Sree Krishna Botanicals is a leading manufacturer and exporter of premium quality essential oils, oleoresins, spice extracts, and botanical extracts from India. Trusted globally." />
+        <meta name="keywords" content="Sree Krishna, Sree Krishna Botanicals, essential oils India, essential oils supplier, pure essential oils, oleoresin manufacturer India, spice extracts exporter, botanical extracts India, natural spice extracts, food grade oleoresin, Sree Krishna essential oils, spice oil India, herbal extracts India, bulk essential oils" />
         <meta name="author" content="Sree Krishna Botanicals" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/" />
+        <link rel="canonical" href="https://sreekrishnabotanicals.com/" />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/" />
-        <meta property="og:title" content="Sree Krishna Botanicals | Premium Oleoresins & Spice Extracts" />
-        <meta property="og:description" content="Leading manufacturer and exporter of premium quality oleoresins, spice extracts, and botanical extracts from India. Trusted globally for purity and potency." />
-        <meta property="og:image" content="https://sree-krishna-botanicals.vercel.app/og-image.jpg" />
+        <meta property="og:url" content="https://sreekrishnabotanicals.com/" />
+        <meta property="og:title" content="Sree Krishna Botanicals | Essential Oils & Botanical Extracts" />
+        <meta property="og:description" content="Leading manufacturer and exporter of premium quality essential oils, oleoresins, and botanical extracts from India." />
+        <meta property="og:image" content="https://sreekrishnabotanicals.com/og-image.jpg" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="Sree Krishna Botanicals" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sree Krishna Botanicals | Premium Oleoresins & Spice Extracts" />
-        <meta name="twitter:description" content="Leading manufacturer and exporter of premium quality oleoresins and spice extracts from India." />
-        <meta name="twitter:image" content="https://sree-krishna-botanicals.vercel.app/og-image.jpg" />
+        <meta name="twitter:title" content="Sree Krishna Botanicals | Essential Oils & Botanical Extracts" />
+        <meta name="twitter:description" content="Leading manufacturer and exporter of premium quality essential oils and botanical extracts from India." />
+        <meta name="twitter:image" content="https://sreekrishnabotanicals.com/og-image.jpg" />
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Sree Krishna Botanicals",
-            "url": "https://sree-krishna-botanicals.vercel.app",
-            "logo": "https://sree-krishna-botanicals.vercel.app/logo.png",
+            "url": "https://sreekrishnabotanicals.com",
+            "logo": "https://sreekrishnabotanicals.com/logo.png",
             "description": "Leading manufacturer and exporter of premium quality oleoresins, spice extracts, and botanical extracts from India.",
             "address": {
               "@type": "PostalAddress",

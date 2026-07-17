@@ -50,9 +50,9 @@ export default function Contact() {
         <meta name="description" content="Contact Sree Krishna Botanicals for bulk oleoresin quotes, custom botanical extract inquiries, export partnerships, and business collaboration. Located in Andhra Pradesh, India." />
         <meta name="keywords" content="contact Sree Krishna Botanicals, oleoresin quote India, botanical extract inquiry, spice extract supplier contact, bulk order oleoresin, export inquiry spice extracts, turmeric extract wholesale, natural extract business India, botanical extract partnership" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sree-krishna-botanicals.vercel.app/contact" />
+        <link rel="canonical" href="https://sreekrishnabotanicals.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sree-krishna-botanicals.vercel.app/contact" />
+        <meta property="og:url" content="https://sreekrishnabotanicals.com/contact" />
         <meta property="og:title" content="Contact Us | Sree Krishna Botanicals" />
         <meta property="og:description" content="Get in touch for bulk oleoresin quotes, custom botanical extract inquiries, and export partnerships." />
         <meta property="og:site_name" content="Sree Krishna Botanicals" />
