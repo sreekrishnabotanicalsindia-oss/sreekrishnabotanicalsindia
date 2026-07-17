@@ -37,7 +37,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-brand-dark font-bold">Email Us</span>
-                <span className="text-sm text-gray-600">info@sreekrishnabotanicals.com</span>
+                <span className="text-sm text-gray-600">support@sreekrishnabotanicals.info</span>
               </div>
             </div>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-brand-dark font-bold">Call Us</span>
-                <span className="text-sm text-gray-600">+91 12345 67890</span>
+                <span className="text-sm text-gray-600">+91 9327336699</span>
               </div>
             </div>
 

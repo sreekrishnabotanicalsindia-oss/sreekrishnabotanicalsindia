@@ -104,8 +104,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-bold text-sm text-[#0d4f26] mb-1">Phone</h4>
                     <p className="text-xs text-gray-700 leading-relaxed font-medium">
-                      +91 9160 550 680<br/>
-                      +91 9030 096 070
+                      +91 9327336699
                     </p>
                   </div>
                 </div>
@@ -118,8 +117,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-bold text-sm text-[#0d4f26] mb-1">Email</h4>
                     <p className="text-xs text-gray-700 leading-relaxed font-medium">
-                      info@sreekrishnabotanicals.com<br/>
-                      sales@sreekrishnabotanicals.com
+                      support@sreekrishnabotanicals.info
                     </p>
                   </div>
                 </div>
