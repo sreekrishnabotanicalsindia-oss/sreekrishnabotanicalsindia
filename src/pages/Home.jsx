@@ -104,8 +104,11 @@ export default function Home() {
             "description": "Leading manufacturer and exporter of premium quality oleoresins, spice extracts, and botanical extracts from India.",
             "address": {
               "@type": "PostalAddress",
-              "addressCountry": "IN",
-              "addressRegion": "Andhra Pradesh"
+              "streetAddress": "PT. 33, Sy. No. 88/1 & 89/1, Lingampalli, Serilingampally",
+              "addressLocality": "K.V.Rangareddy",
+              "postalCode": "500019",
+              "addressRegion": "Telangana",
+              "addressCountry": "IN"
             },
             "contactPoint": {
               "@type": "ContactPoint",

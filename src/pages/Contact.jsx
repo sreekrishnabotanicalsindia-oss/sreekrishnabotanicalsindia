@@ -47,7 +47,7 @@ export default function Contact() {
     <div className="bg-[#fcfdfa] min-h-screen font-sans text-gray-800">
       <Helmet>
         <title>Contact Us | Get a Quote for Oleoresins & Spice Extracts - Sree Krishna Botanicals</title>
-        <meta name="description" content="Contact Sree Krishna Botanicals for bulk oleoresin quotes, custom botanical extract inquiries, export partnerships, and business collaboration. Located in Andhra Pradesh, India." />
+        <meta name="description" content="Contact Sree Krishna Botanicals for bulk oleoresin quotes, custom botanical extract inquiries, export partnerships, and business collaboration. Located in Telangana, India." />
         <meta name="keywords" content="contact Sree Krishna Botanicals, oleoresin quote India, botanical extract inquiry, spice extract supplier contact, bulk order oleoresin, export inquiry spice extracts, turmeric extract wholesale, natural extract business India, botanical extract partnership" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://sreekrishnabotanicals.com/contact" />
@@ -89,9 +89,9 @@ export default function Contact() {
                     <h4 className="font-bold text-sm text-[#0d4f26] mb-1">Our Address</h4>
                     <p className="text-xs text-gray-700 leading-relaxed font-medium">
                       Sree Krishna Botanicals<br/>
-                      Plot No. 123, Green Valley Industrial Area,<br/>
-                      Karakapatla, Anantapur - 515002,<br/>
-                      Andhra Pradesh, India.
+                      PT. 33, Sy. No. 88/1 & 89/1,<br/>
+                      Lingampalli, Serilingampally,<br/>
+                      K.V.Rangareddy - 500019, Telangana.
                     </p>
                   </div>
                 </div>

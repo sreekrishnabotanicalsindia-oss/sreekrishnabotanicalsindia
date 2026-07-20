@@ -150,7 +150,7 @@ export default function Footer() {
                   </div>
                   <div>
                       <span className="block text-[11px] font-bold text-white mb-0.5">Address</span>
-                      <span className="text-[10px] leading-relaxed font-light">Plot No. 123, Green Valley Industrial Area,<br/>Karakapatla, Anantapur - 515002,<br/>Andhra Pradesh, India.</span>
+                      <span className="text-[10px] leading-relaxed font-light">PT. 33, Sy. No. 88/1 & 89/1,<br/>Lingampalli, Serilingampally,<br/>K.V.Rangareddy - 500019, Telangana.</span>
                   </div>
                 </li>
                 <li className="flex gap-3 text-green-50 items-start">
